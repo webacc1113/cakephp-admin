@@ -1,0 +1,2334 @@
+2017-03-17 09:24:44 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 E:\Projects\CP\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 E:\Projects\CP\lib\Cake\Model\Model.php(3617): ConnectionManager::getDataSource('default')
+#3 E:\Projects\CP\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3644): Model->setSource('cake_sessions')
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(3022): Model->getDataSource()
+#6 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('first', Array)
+#7 E:\Projects\CP\lib\Cake\Model\Datasource\Session\DatabaseSession.php(94): Model->find('first', Array)
+#8 [internal function]: DatabaseSession->read('2kdetrd1r699bc9...')
+#9 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(668): session_start()
+#10 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(204): CakeSession::_startSession()
+#11 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(231): CakeSession::start()
+#12 E:\Projects\CP\lib\Cake\Controller\Component\AuthComponent.php(660): CakeSession::check('Auth.User')
+#13 E:\Projects\CP\app\Controller\AppController.php(68): AuthComponent::user()
+#14 E:\Projects\CP\app\Controller\StatisticsController.php(11): AppController->beforeFilter()
+#15 [internal function]: StatisticsController->beforeFilter(Object(CakeEvent))
+#16 E:\Projects\CP\lib\Cake\Event\CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#17 E:\Projects\CP\lib\Cake\Controller\Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#18 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#19 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(StatisticsController), Object(CakeRequest))
+#20 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#21 {main}
+2017-03-17 16:43:38 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Quali1fication.project_id' in 'where clause'
+Request URL: /surveys/dashboard/1011
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Qualifi...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Qualifi...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Qualifi...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(Qualification), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\app\Controller\SurveysController.php(505): Model->find('all', Array)
+#7 [internal function]: SurveysController->dashboard('1011')
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SurveysController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SurveysController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-03-17 19:45:57 Error: Fatal Error (1): Class 'QueryEngine' not found in [E:\Projects\CP\app\Controller\QualificationsController.php, line 1518]
+2017-03-17 19:45:57 Error: [FatalErrorException] Class 'QueryEngine' not found
+Request URL: /qualifications/refresh?project_id=1011
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Class 'QueryEng...', 'E:\Projects\CP\...', 1518)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'QueryEng...', 'E:\Projects\CP\...', 1518, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Class 'QueryEng...', 'E:\Projects\CP\...', 1518, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-17 19:46:19 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'partner' in 'where clause'
+Request URL: /qualifications/refresh?project_id=1011
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `QueryPr...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `QueryPr...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `QueryPr...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(QueryProfile), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\app\Lib\QueryEngine.php(342): Model->find('all', Array)
+#7 E:\Projects\CP\app\Controller\QualificationsController.php(1519): QueryEngine::execute(Array)
+#8 [internal function]: QualificationsController->refresh()
+#9 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(QualificationsController), Array)
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(QualificationsController), Object(CakeRequest))
+#12 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2017-03-18 01:19:24 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Quali1fication.project_id' in 'where clause'
+Request URL: /qualifications/refresh_users?project_id=1011
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Qualifi...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Qualifi...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Qualifi...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(Qualification), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\app\Controller\QualificationsController.php(1519): Model->find('all', Array)
+#7 [internal function]: QualificationsController->refresh_users()
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(QualificationsController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(QualificationsController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-03-19 14:23:10 Error: [MissingViewException] View file "MailLogs\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'MailLogs\\index.ctp',
+)
+Request URL: /mail_logs?group_id=15
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 E:\Projects\CP\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MailLogsController), Object(CakeRequest))
+#4 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-03-19 14:36:09 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\Projects\CP\app\Controller\MailLogsController.php, line 15]
+2017-03-19 14:36:09 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /mail_logs
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\Projects\CP\...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\Projects\CP\...', 15, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\Projects\CP\...', 15, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-19 14:46:50 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\Projects\CP\app\Controller\SystemMailLogsController.php, line 15]
+2017-03-19 14:46:50 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /system_mail_logs
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\Projects\CP\...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\Projects\CP\...', 15, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\Projects\CP\...', 15, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-19 15:33:45 Error: [MissingModelException] SystemMialLog
+Request URL: /system_mail_logs
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Controller\Controller.php(1086): PaginatorComponent->paginate('SystemMialLog', Array, Array)
+#1 E:\Projects\CP\app\Controller\SystemMailLogsController.php(23): Controller->paginate('SystemMialLog')
+#2 [internal function]: SystemMailLogsController->index()
+#3 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SystemMailLogsController), Array)
+#4 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#5 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SystemMailLogsController), Object(CakeRequest))
+#6 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2017-03-19 15:52:11 Error: Fatal Error (1): Call to undefined function compat() in [E:\Projects\CP\app\Controller\SystemMailLogsController.php, line 24]
+2017-03-19 15:52:11 Error: [FatalErrorException] Call to undefined function compat()
+Request URL: /system_mail_logs
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'E:\Projects\CP\...', 24)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'E:\Projects\CP\...', 24, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'E:\Projects\CP\...', 24, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-20 01:22:54 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\app\View\SystemMailLogs\index.ctp, line 6]
+2017-03-20 01:22:56 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /system_mail_logs/index/sort:SystemMailLog.started/direction:desc
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 6, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 6, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-20 01:23:22 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2017-03-20 01:23:22 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2017-03-20 01:23:22 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/dashboard/1011?group_id=15
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-20 01:23:22 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/dashboard/1011?group_id=15
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-20 01:23:22 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2017-03-20 01:23:22 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2017-03-20 01:23:22 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /projects?group_id=15
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-20 01:23:22 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /projects?group_id=15
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-20 01:40:45 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2017-03-20 01:40:45 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2017-03-20 01:40:45 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2017-03-20 01:40:45 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2017-03-20 01:40:45 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-20 01:40:45 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-20 01:40:45 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-20 01:40:45 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-20 01:57:33 Error: Fatal Error (4): syntax error, unexpected '[' in [E:\Projects\CP\app\View\Helper\CalculatorHelper.php, line 215]
+2017-03-20 01:57:33 Error: [FatalErrorException] syntax error, unexpected '['
+Request URL: /transactions/withdrawals_report
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 215)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 215, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 215, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-20 08:50:46 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\Projects\CP\app\Controller\SystemMailLogsController.php, line 23]
+2017-03-20 08:50:46 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /system_mail_logs/index?date_from=03%2F01%2F2017&date_to=03%2F20%2F2017
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\Projects\CP\...', 23)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\Projects\CP\...', 23, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\Projects\CP\...', 23, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-21 01:52:08 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'SystemMai1lLog.started' in 'where clause'
+Request URL: /system_mail_logs/index?date_from=03%2F01%2F2017&date_to=03%2F18%2F2017
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT SUM(`Sys...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT SUM(`Sys...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT SUM(`Sys...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(SystemMailLog), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('first', Array)
+#6 E:\Projects\CP\app\Controller\SystemMailLogsController.php(31): Model->find('first', Array)
+#7 [internal function]: SystemMailLogsController->index()
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SystemMailLogsController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SystemMailLogsController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-03-21 01:53:30 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'SystemMai1lLog.started' in 'where clause'
+Request URL: /system_mail_logs/index?date_from=03%2F01%2F2017&date_to=03%2F18%2F2017
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT SUM(`Sys...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT SUM(`Sys...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT SUM(`Sys...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(SystemMailLog), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('first', Array)
+#6 E:\Projects\CP\app\Controller\SystemMailLogsController.php(31): Model->find('first', Array)
+#7 [internal function]: SystemMailLogsController->index()
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SystemMailLogsController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SystemMailLogsController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-03-21 01:54:24 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'SystemMai1lLog.started' in 'where clause'
+Request URL: /system_mail_logs/index?date_from=03%2F01%2F2017&date_to=03%2F18%2F2017
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `SystemM...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `SystemM...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `SystemM...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(SystemMailLog), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 E:\Projects\CP\lib\Cake\Controller\Controller.php(1086): PaginatorComponent->paginate('SystemMailLog', Array, Array)
+#8 E:\Projects\CP\app\Controller\SystemMailLogsController.php(42): Controller->paginate('SystemMailLog')
+#9 [internal function]: SystemMailLogsController->index()
+#10 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SystemMailLogsController), Array)
+#11 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SystemMailLogsController), Object(CakeRequest))
+#13 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2017-03-21 01:56:34 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'SystemMai1lLog.started' in 'where clause'
+Request URL: /system_mail_logs/index?date_from=03%2F01%2F2017&date_to=03%2F18%2F2017
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT SUM(`Sys...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT SUM(`Sys...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT SUM(`Sys...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(SystemMailLog), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('first', Array)
+#6 E:\Projects\CP\app\Controller\SystemMailLogsController.php(31): Model->find('first', Array)
+#7 [internal function]: SystemMailLogsController->index()
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SystemMailLogsController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SystemMailLogsController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-03-21 19:36:42 Error: [MissingTableException] Table balance_mismatches for model BalanceMismatch was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'balance_mismatches',
+  'class' => 'BalanceMismatch',
+  'ds' => 'default',
+)
+Request URL: /balance_mismatches
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Model.php(3644): Model->setSource('balance_mismatc...')
+#1 E:\Projects\CP\lib\Cake\Model\Model.php(3022): Model->getDataSource()
+#2 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#3 E:\Projects\CP\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#4 E:\Projects\CP\lib\Cake\Controller\Controller.php(1086): PaginatorComponent->paginate(NULL, Array, Array)
+#5 E:\Projects\CP\app\Controller\BalanceMismatchesController.php(47): Controller->paginate()
+#6 [internal function]: BalanceMismatchesController->index()
+#7 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(BalanceMismatchesController), Array)
+#8 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(BalanceMismatchesController), Object(CakeRequest))
+#10 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-03-21 19:37:36 Error: Fatal Error (4): syntax error, unexpected '[', expecting ')' in [E:\Projects\CP\app\Controller\ChartsController.php, line 206]
+2017-03-21 19:37:36 Error: [FatalErrorException] syntax error, unexpected '[', expecting ')'
+Request URL: /charts
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 206)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 206, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 206, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-21 19:38:29 Error: [MissingTableException] Table offer_redemptions for model OfferRedemption was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'offer_redemptions',
+  'class' => 'OfferRedemption',
+  'ds' => 'default',
+)
+Request URL: /offers/revenues
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Model.php(3644): Model->setSource('offer_redemptio...')
+#1 E:\Projects\CP\lib\Cake\Model\Model.php(3022): Model->getDataSource()
+#2 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#3 E:\Projects\CP\app\Controller\OffersController.php(20): Model->find('all', Array)
+#4 E:\Projects\CP\app\Controller\OffersController.php(190): OffersController->__get_partners()
+#5 [internal function]: OffersController->revenues()
+#6 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(OffersController), Array)
+#7 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(OffersController), Object(CakeRequest))
+#9 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2017-03-21 19:41:50 Error: [NotFoundException] Not Found
+Request URL: /source_mappings/export
+Stack Trace:
+#0 [internal function]: SourceMappingsController->export()
+#1 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SourceMappingsController), Array)
+#2 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SourceMappingsController), Object(CakeRequest))
+#4 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-03-21 19:43:26 Error: Fatal Error (4): syntax error, unexpected '[' in [E:\Projects\CP\app\View\Helper\CalculatorHelper.php, line 215]
+2017-03-21 19:43:26 Error: [FatalErrorException] syntax error, unexpected '['
+Request URL: /transactions?error=1
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 215)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 215, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 215, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-21 20:52:54 Error: Fatal Error (1): Call to undefined function strototime() in [E:\Projects\CP\app\View\SystemMailLogs\summed_logs.ctp, line 20]
+2017-03-21 20:52:54 Error: [FatalErrorException] Call to undefined function strototime()
+Request URL: /system_mail_logs/summed_logs
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'E:\Projects\CP\...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'E:\Projects\CP\...', 20, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'E:\Projects\CP\...', 20, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-23 02:19:13 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+',
+  'enabled' => true,
+)
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 E:\Projects\CP\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 E:\Projects\CP\lib\Cake\Model\Model.php(3617): ConnectionManager::getDataSource('default')
+#3 E:\Projects\CP\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3644): Model->setSource('cake_sessions')
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(3022): Model->getDataSource()
+#6 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('first', Array)
+#7 E:\Projects\CP\lib\Cake\Model\Datasource\Session\DatabaseSession.php(94): Model->find('first', Array)
+#8 [internal function]: DatabaseSession->read('trq5dudefs7knvs...')
+#9 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(668): session_start()
+#10 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(204): CakeSession::_startSession()
+#11 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(231): CakeSession::start()
+#12 E:\Projects\CP\lib\Cake\Controller\Component\AuthComponent.php(660): CakeSession::check('Auth.User')
+#13 E:\Projects\CP\app\Controller\AppController.php(68): AuthComponent::user()
+#14 E:\Projects\CP\app\Controller\SurveysController.php(15): AppController->beforeFilter()
+#15 [internal function]: SurveysController->beforeFilter(Object(CakeEvent))
+#16 E:\Projects\CP\lib\Cake\Event\CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#17 E:\Projects\CP\lib\Cake\Controller\Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#18 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#19 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SurveysController), Object(CakeRequest))
+#20 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#21 {main}
+2017-03-23 02:19:13 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+',
+  'enabled' => true,
+)
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 E:\Projects\CP\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 E:\Projects\CP\lib\Cake\Model\Model.php(3617): ConnectionManager::getDataSource('default')
+#3 E:\Projects\CP\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3644): Model->setSource('cake_sessions')
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(3022): Model->getDataSource()
+#6 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('first', Array)
+#7 E:\Projects\CP\lib\Cake\Model\Datasource\Session\DatabaseSession.php(94): Model->find('first', Array)
+#8 [internal function]: DatabaseSession->read('trq5dudefs7knvs...')
+#9 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(668): session_start()
+#10 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(204): CakeSession::_startSession()
+#11 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(231): CakeSession::start()
+#12 E:\Projects\CP\lib\Cake\Controller\Component\AuthComponent.php(660): CakeSession::check('Auth.User')
+#13 E:\Projects\CP\app\Controller\AppController.php(68): AuthComponent::user()
+#14 E:\Projects\CP\app\Controller\SurveysController.php(15): AppController->beforeFilter()
+#15 [internal function]: SurveysController->beforeFilter(Object(CakeEvent))
+#16 E:\Projects\CP\lib\Cake\Event\CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#17 E:\Projects\CP\lib\Cake\Controller\Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#18 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#19 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SurveysController), Object(CakeRequest))
+#20 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#21 {main}
+2017-03-23 02:21:15 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+',
+  'enabled' => true,
+)
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 E:\Projects\CP\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 E:\Projects\CP\lib\Cake\Model\Model.php(3617): ConnectionManager::getDataSource('default')
+#3 E:\Projects\CP\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3644): Model->setSource('cake_sessions')
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(3022): Model->getDataSource()
+#6 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('first', Array)
+#7 E:\Projects\CP\lib\Cake\Model\Datasource\Session\DatabaseSession.php(94): Model->find('first', Array)
+#8 [internal function]: DatabaseSession->read('trq5dudefs7knvs...')
+#9 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(668): session_start()
+#10 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(204): CakeSession::_startSession()
+#11 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(231): CakeSession::start()
+#12 E:\Projects\CP\lib\Cake\Controller\Component\AuthComponent.php(660): CakeSession::check('Auth.User')
+#13 E:\Projects\CP\app\Controller\AppController.php(68): AuthComponent::user()
+#14 E:\Projects\CP\app\Controller\SurveysController.php(15): AppController->beforeFilter()
+#15 [internal function]: SurveysController->beforeFilter(Object(CakeEvent))
+#16 E:\Projects\CP\lib\Cake\Event\CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#17 E:\Projects\CP\lib\Cake\Controller\Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#18 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#19 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SurveysController), Object(CakeRequest))
+#20 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#21 {main}
+2017-03-26 13:48:19 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2017-03-26 13:48:21 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-26 13:48:25 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2017-03-26 13:48:25 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-26 16:00:43 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+',
+  'enabled' => true,
+)
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 E:\Projects\CP\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 E:\Projects\CP\lib\Cake\Model\Model.php(3617): ConnectionManager::getDataSource('default')
+#3 E:\Projects\CP\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3644): Model->setSource('cake_sessions')
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(3022): Model->getDataSource()
+#6 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('first', Array)
+#7 E:\Projects\CP\lib\Cake\Model\Datasource\Session\DatabaseSession.php(94): Model->find('first', Array)
+#8 [internal function]: DatabaseSession->read('trq5dudefs7knvs...')
+#9 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(668): session_start()
+#10 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(204): CakeSession::_startSession()
+#11 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(231): CakeSession::start()
+#12 E:\Projects\CP\lib\Cake\Controller\Component\AuthComponent.php(660): CakeSession::check('Auth.User')
+#13 E:\Projects\CP\app\Controller\AppController.php(68): AuthComponent::user()
+#14 E:\Projects\CP\app\Controller\SurveysController.php(15): AppController->beforeFilter()
+#15 [internal function]: SurveysController->beforeFilter(Object(CakeEvent))
+#16 E:\Projects\CP\lib\Cake\Event\CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#17 E:\Projects\CP\lib\Cake\Controller\Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#18 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#19 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SurveysController), Object(CakeRequest))
+#20 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#21 {main}
+2017-03-27 18:09:25 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'project_id' cannot be null
+Request URL: /qualifications/ajax_qualification_status/131
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `mi...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `mi...')
+#3 E:\Projects\CP\lib\Cake\Model\Model.php(1928): DboSource->create(Object(ProjectLog), Array, Array)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(1751): Model->_doSave(Array, Array)
+#5 E:\Projects\CP\app\Controller\QualificationsController.php(48): Model->save(Array)
+#6 [internal function]: QualificationsController->ajax_qualification_status('131')
+#7 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(QualificationsController), Array)
+#8 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(QualificationsController), Object(CakeRequest))
+#10 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-03-27 19:02:31 Error: Fatal Error (4): syntax error, unexpected ')' in [E:\Projects\CP\app\Controller\QualificationsController.php, line 493]
+2017-03-27 19:02:31 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /qualifications/query/us?project_id=1011
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 493)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 493, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 493, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-28 03:34:37 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2017-03-28 03:34:37 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Cache\Engine\FileEngine.php, line 355]
+2017-03-28 03:34:39 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-28 03:34:39 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 355)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 355, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 355, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-28 03:34:40 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2017-03-28 03:34:40 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-28 03:34:42 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2017-03-28 03:34:42 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-28 03:34:43 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Cache\Engine\FileEngine.php, line 142]
+2017-03-28 03:34:44 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 142)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 142, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 142, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-28 03:35:12 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2017-03-28 03:35:13 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-28 03:35:15 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Cache\Engine\FileEngine.php, line 354]
+2017-03-28 03:35:16 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 354)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 354, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 354, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-28 03:35:42 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2017-03-28 03:35:45 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-28 03:35:51 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2017-03-28 03:35:51 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-28 03:35:56 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Cache\Engine\FileEngine.php, line 142]
+2017-03-28 03:35:56 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 142)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 142, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 142, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-28 03:36:30 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2017-03-28 03:36:31 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-28 03:36:59 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Cache\Engine\FileEngine.php, line 142]
+2017-03-28 03:36:59 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 142)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 142, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 142, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-28 18:13:31 Error: [PDOException] SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `AdminRo...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `AdminRo...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1444): DboSource->fetchAll('SELECT `AdminRo...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1278): DboSource->_fetchHasMany(Object(Admin), 'SELECT `AdminRo...', Array)
+#5 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1137): DboSource->queryAssociation(Object(Admin), Object(AdminRole), 'hasMany', 'AdminRole', Array, Array, true, Array, 1, Array)
+#6 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(Admin), Array)
+#7 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('first', Array)
+#8 E:\Projects\CP\app\Controller\Component\AdminsComponent.php(17): Model->find('first', Array)
+#9 E:\Projects\CP\app\Controller\AppController.php(69): AdminsComponent->admin('1')
+#10 E:\Projects\CP\app\Controller\SurveysController.php(15): AppController->beforeFilter()
+#11 [internal function]: SurveysController->beforeFilter(Object(CakeEvent))
+#12 E:\Projects\CP\lib\Cake\Event\CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#13 E:\Projects\CP\lib\Cake\Controller\Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#14 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#15 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SurveysController), Object(CakeRequest))
+#16 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2017-03-28 19:38:06 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Cache\Engine\FileEngine.php, line 355]
+2017-03-28 19:38:07 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 355)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 355, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 355, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-29 03:46:44 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2017-03-29 03:46:45 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-29 03:46:46 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2017-03-29 03:46:46 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-29 03:48:14 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2017-03-29 03:48:14 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2017-03-29 03:48:15 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-29 03:48:15 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-29 08:35:22 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+',
+  'enabled' => true,
+)
+Request URL: /qualifications/child_qualification/130
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 E:\Projects\CP\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 E:\Projects\CP\lib\Cake\Model\Model.php(3617): ConnectionManager::getDataSource('default')
+#3 E:\Projects\CP\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3644): Model->setSource('cake_sessions')
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(3022): Model->getDataSource()
+#6 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('first', Array)
+#7 E:\Projects\CP\lib\Cake\Model\Datasource\Session\DatabaseSession.php(94): Model->find('first', Array)
+#8 [internal function]: DatabaseSession->read('s7s6fk1j65tqk60...')
+#9 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(668): session_start()
+#10 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(204): CakeSession::_startSession()
+#11 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(231): CakeSession::start()
+#12 E:\Projects\CP\lib\Cake\Controller\Component\AuthComponent.php(660): CakeSession::check('Auth.User')
+#13 E:\Projects\CP\app\Controller\AppController.php(68): AuthComponent::user()
+#14 E:\Projects\CP\app\Controller\QualificationsController.php(12): AppController->beforeFilter()
+#15 [internal function]: QualificationsController->beforeFilter(Object(CakeEvent))
+#16 E:\Projects\CP\lib\Cake\Event\CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#17 E:\Projects\CP\lib\Cake\Controller\Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#18 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#19 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(QualificationsController), Object(CakeRequest))
+#20 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#21 {main}
+2017-03-29 08:45:01 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Qualification.additional_json' in 'field list'
+Request URL: /surveys/ajax_view_qualification/130
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Qualifi...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Qualifi...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Qualifi...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(Qualification), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('first', Array)
+#6 E:\Projects\CP\app\Controller\SurveysController.php(3611): Model->find('first', Array)
+#7 [internal function]: SurveysController->ajax_view_qualification('130')
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SurveysController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SurveysController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-03-30 03:54:38 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2017-03-30 03:54:49 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-30 03:55:17 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2017-03-30 03:55:17 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-30 03:55:21 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Cache\Engine\FileEngine.php, line 348]
+2017-03-30 03:55:21 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 348)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 348, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 348, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-31 16:27:55 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Qualification.additional_json' in 'field list'
+Request URL: /surveys/ajax_view_qualification/130
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Qualifi...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Qualifi...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Qualifi...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(Qualification), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('first', Array)
+#6 E:\Projects\CP\app\Controller\SurveysController.php(3613): Model->find('first', Array)
+#7 [internal function]: SurveysController->ajax_view_qualification('130')
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SurveysController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SurveysController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-03-31 16:57:13 Error: Fatal Error (4): syntax error, unexpected T_RETURN in [E:\Projects\CP\app\Controller\SurveysController.php, line 3589]
+2017-03-31 16:57:13 Error: [FatalErrorException] syntax error, unexpected T_RETURN
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 3589)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 3589, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 3589, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-31 16:57:21 Error: Fatal Error (4): syntax error, unexpected T_RETURN in [E:\Projects\CP\app\Controller\SurveysController.php, line 3589]
+2017-03-31 16:57:21 Error: [FatalErrorException] syntax error, unexpected T_RETURN
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 3589)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 3589, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 3589, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-31 16:57:29 Error: Fatal Error (4): syntax error, unexpected T_RETURN in [E:\Projects\CP\app\Controller\SurveysController.php, line 3589]
+2017-03-31 16:57:29 Error: [FatalErrorException] syntax error, unexpected T_RETURN
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 3589)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 3589, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 3589, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-31 16:57:37 Error: Fatal Error (4): syntax error, unexpected T_RETURN in [E:\Projects\CP\app\Controller\SurveysController.php, line 3589]
+2017-03-31 16:57:37 Error: [FatalErrorException] syntax error, unexpected T_RETURN
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 3589)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 3589, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 3589, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-31 17:02:06 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'QualificationUser.notification_timestamp' in 'field list'
+Request URL: /reports/survey_coverage/130
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Qualifi...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Qualifi...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Qualifi...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(QualificationUser), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 E:\Projects\CP\lib\Cake\Controller\Controller.php(1086): PaginatorComponent->paginate('QualificationUs...', Array, Array)
+#8 E:\Projects\CP\app\Controller\ReportsController.php(5296): Controller->paginate('QualificationUs...')
+#9 [internal function]: ReportsController->survey_coverage('130')
+#10 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ReportsController), Array)
+#11 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ReportsController), Object(CakeRequest))
+#13 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2017-04-01 16:48:33 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+',
+  'enabled' => true,
+)
+Request URL: /surveys/dashboard/1011
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 E:\Projects\CP\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 E:\Projects\CP\lib\Cake\Model\Model.php(3617): ConnectionManager::getDataSource('default')
+#3 E:\Projects\CP\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3644): Model->setSource('cake_sessions')
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(3022): Model->getDataSource()
+#6 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('first', Array)
+#7 E:\Projects\CP\lib\Cake\Model\Datasource\Session\DatabaseSession.php(94): Model->find('first', Array)
+#8 [internal function]: DatabaseSession->read('b6me0mio4d1nq62...')
+#9 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(668): session_start()
+#10 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(204): CakeSession::_startSession()
+#11 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(231): CakeSession::start()
+#12 E:\Projects\CP\lib\Cake\Controller\Component\AuthComponent.php(660): CakeSession::check('Auth.User')
+#13 E:\Projects\CP\app\Controller\AppController.php(68): AuthComponent::user()
+#14 E:\Projects\CP\app\Controller\SurveysController.php(15): AppController->beforeFilter()
+#15 [internal function]: SurveysController->beforeFilter(Object(CakeEvent))
+#16 E:\Projects\CP\lib\Cake\Event\CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#17 E:\Projects\CP\lib\Cake\Controller\Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#18 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#19 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SurveysController), Object(CakeRequest))
+#20 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#21 {main}
+2017-04-07 17:37:23 Error: Fatal Error (4): syntax error, unexpected ';' in [E:\Projects\CP\app\Controller\SurveysController.php, line 2631]
+2017-04-07 17:37:23 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 2631)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 2631, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 2631, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-04-07 17:37:25 Error: Fatal Error (4): syntax error, unexpected ';' in [E:\Projects\CP\app\Controller\SurveysController.php, line 2631]
+2017-04-07 17:37:25 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /surveys/prescreeners/4766
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 2631)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 2631, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 2631, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-04-07 17:37:32 Error: Fatal Error (4): syntax error, unexpected ';' in [E:\Projects\CP\app\Controller\SurveysController.php, line 2631]
+2017-04-07 17:37:32 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 2631)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 2631, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 2631, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-04-09 18:02:58 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+',
+  'enabled' => true,
+)
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 E:\Projects\CP\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 E:\Projects\CP\lib\Cake\Model\Model.php(3617): ConnectionManager::getDataSource('default')
+#3 E:\Projects\CP\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3644): Model->setSource('cake_sessions')
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(3022): Model->getDataSource()
+#6 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('first', Array)
+#7 E:\Projects\CP\lib\Cake\Model\Datasource\Session\DatabaseSession.php(94): Model->find('first', Array)
+#8 [internal function]: DatabaseSession->read('kisaf9ce8jduvfr...')
+#9 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(668): session_start()
+#10 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(204): CakeSession::_startSession()
+#11 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(231): CakeSession::start()
+#12 E:\Projects\CP\lib\Cake\Controller\Component\AuthComponent.php(660): CakeSession::check('Auth.User')
+#13 E:\Projects\CP\app\Controller\AppController.php(68): AuthComponent::user()
+#14 E:\Projects\CP\app\Controller\SurveysController.php(15): AppController->beforeFilter()
+#15 [internal function]: SurveysController->beforeFilter(Object(CakeEvent))
+#16 E:\Projects\CP\lib\Cake\Event\CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#17 E:\Projects\CP\lib\Cake\Controller\Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#18 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#19 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SurveysController), Object(CakeRequest))
+#20 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#21 {main}
+2017-04-12 03:15:53 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php, line 460]
+2017-04-12 03:15:53 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /partners/add
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 460, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-04-14 08:50:55 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Utility\Debugger.php, line 536]
+2017-04-14 08:50:55 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /projects?group_id=15
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 536)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 536, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 536, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-04-14 08:51:26 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND `AnswerText`.`country` IS NULL' at line 1
+Request URL: /qualifications/child_qualification
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Answer`...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Answer`...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Answer`...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(Answer), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\app\Controller\QualificationsController.php(1444): Model->find('all', Array)
+#7 E:\Projects\CP\app\Controller\QualificationsController.php(1206): QualificationsController->get_qualification_from_json('{"partner":"luc...')
+#8 [internal function]: QualificationsController->child_qualification()
+#9 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(QualificationsController), Array)
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(QualificationsController), Object(CakeRequest))
+#12 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2017-04-14 15:49:55 Error: [NotFoundException] Invalid survey
+Request URL: /invoices/generate
+Stack Trace:
+#0 [internal function]: InvoicesController->generate()
+#1 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-04-14 16:10:48 Error: [MissingViewException] View file "ApiUsers\ajax_create_admin.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'ApiUsers\\ajax_create_admin.ctp',
+)
+Request URL: /api_users/ajax_create_admin
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 E:\Projects\CP\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ApiUsersController), Object(CakeRequest))
+#4 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-04-14 16:14:16 Error: [MissingViewException] View file "ApiUsers\ajax_create_admin.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'ApiUsers\\ajax_create_admin.ctp',
+)
+Request URL: /api_users/ajax_create_admin
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 E:\Projects\CP\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ApiUsersController), Object(CakeRequest))
+#4 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-04-14 16:15:21 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Utility\Debugger.php, line 471]
+2017-04-14 16:15:21 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /projects?group_id=15
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 471)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 471, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 471, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-04-14 16:16:29 Error: [MissingViewException] View file "ApiUsers\ajax_create_admin.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'ApiUsers\\ajax_create_admin.ctp',
+)
+Request URL: /api_users/ajax_create_admin
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 E:\Projects\CP\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ApiUsersController), Object(CakeRequest))
+#4 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-04-14 16:16:54 Error: [MissingViewException] View file "ApiUsers\ajax_create_admin.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'ApiUsers\\ajax_create_admin.ctp',
+)
+Request URL: /api_users/ajax_create_admin
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 E:\Projects\CP\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ApiUsersController), Object(CakeRequest))
+#4 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-04-14 16:17:24 Error: [MissingViewException] View file "ApiUsers\ajax_create_admin.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'ApiUsers\\ajax_create_admin.ctp',
+)
+Request URL: /api_users/ajax_create_admin
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 E:\Projects\CP\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ApiUsersController), Object(CakeRequest))
+#4 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-04-14 18:06:19 Error: [MissingViewException] View file "Surveys\ajax_edit_quotas.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Surveys\\ajax_edit_quotas.ctp',
+)
+Request URL: /surveys/ajax_edit_quotas/130
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 E:\Projects\CP\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SurveysController), Object(CakeRequest))
+#4 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-04-14 18:07:04 Error: [MissingViewException] View file "Surveys\ajax_edit_quotas.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Surveys\\ajax_edit_quotas.ctp',
+)
+Request URL: /surveys/ajax_edit_quotas/130
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 E:\Projects\CP\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SurveysController), Object(CakeRequest))
+#4 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-04-14 18:07:09 Error: [MissingViewException] View file "Surveys\ajax_edit_quotas.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Surveys\\ajax_edit_quotas.ctp',
+)
+Request URL: /surveys/ajax_edit_quotas/130
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 E:\Projects\CP\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SurveysController), Object(CakeRequest))
+#4 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-04-17 16:51:07 Error: Fatal Error (1): Call to undefined method ApiUsersController::authedUser() in [E:\Projects\CP\app\Controller\ApiUsersController.php, line 181]
+2017-04-17 16:51:07 Error: [FatalErrorException] Call to undefined method ApiUsersController::authedUser()
+Request URL: /api_users/ajax_create_admin/
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'E:\Projects\CP\...', 181)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'E:\Projects\CP\...', 181, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'E:\Projects\CP\...', 181, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-04-17 18:26:23 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Admin.notes' in 'field list'
+Request URL: /api_users
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `ApiUser...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `ApiUser...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `ApiUser...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(ApiUser), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 E:\Projects\CP\lib\Cake\Controller\Controller.php(1086): PaginatorComponent->paginate('ApiUser', Array, Array)
+#8 E:\Projects\CP\app\Controller\ApiUsersController.php(34): Controller->paginate('ApiUser')
+#9 [internal function]: ApiUsersController->index()
+#10 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ApiUsersController), Array)
+#11 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ApiUsersController), Object(CakeRequest))
+#13 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2017-04-18 09:18:13 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+',
+  'enabled' => true,
+)
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 E:\Projects\CP\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 E:\Projects\CP\lib\Cake\Model\Model.php(3617): ConnectionManager::getDataSource('default')
+#3 E:\Projects\CP\lib\Cake\Model\Model.php(1155): Model->setDataSource('default')
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3644): Model->setSource('cake_sessions')
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(3022): Model->getDataSource()
+#6 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('first', Array)
+#7 E:\Projects\CP\lib\Cake\Model\Datasource\Session\DatabaseSession.php(94): Model->find('first', Array)
+#8 [internal function]: DatabaseSession->read('pkca4hkfsajpu9o...')
+#9 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(668): session_start()
+#10 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(204): CakeSession::_startSession()
+#11 E:\Projects\CP\lib\Cake\Model\Datasource\CakeSession.php(231): CakeSession::start()
+#12 E:\Projects\CP\lib\Cake\Controller\Component\AuthComponent.php(660): CakeSession::check('Auth.User')
+#13 E:\Projects\CP\app\Controller\AppController.php(68): AuthComponent::user()
+#14 E:\Projects\CP\app\Controller\SurveysController.php(15): AppController->beforeFilter()
+#15 [internal function]: SurveysController->beforeFilter(Object(CakeEvent))
+#16 E:\Projects\CP\lib\Cake\Event\CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#17 E:\Projects\CP\lib\Cake\Controller\Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#18 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#19 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SurveysController), Object(CakeRequest))
+#20 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#21 {main}
+2017-04-26 16:30:09 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Utility\Debugger.php, line 471]
+2017-04-26 16:30:09 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /projects?group_id=15
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 471)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 471, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 471, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-04-26 16:30:56 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Utility\Debugger.php, line 488]
+2017-04-26 16:30:56 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /projects?group_id=15
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 488)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 488, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 488, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-04-26 16:31:59 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Utility\Debugger.php, line 818]
+2017-04-26 16:31:59 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /projects?group_id=15
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 818)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 818, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 818, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-04-26 16:33:29 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [E:\Projects\CP\lib\Cake\Utility\String.php, line 240]
+2017-04-26 16:33:29 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /projects?group_id=15
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'E:\Projects\CP\...', 240)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'E:\Projects\CP\...', 240, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'E:\Projects\CP\...', 240, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-04-26 16:35:32 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 91185392 bytes) in [E:\Projects\CP\lib\Cake\View\View.php, line 964]
+2017-04-26 16:35:32 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 91185392 bytes)
+Request URL: /projects?group_id=15
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'E:\Projects\CP\...', 964)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'E:\Projects\CP\...', 964, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'E:\Projects\CP\...', 964, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-04-27 01:37:25 Error: [MissingTableException] Table user_notifications for model UserNotification was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'user_notifications',
+  'class' => 'UserNotification',
+  'ds' => 'default',
+)
+Request URL: /notification_schedules/user?user_id=128
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Model.php(3644): Model->setSource('user_notificati...')
+#1 E:\Projects\CP\lib\Cake\Model\Model.php(3022): Model->getDataSource()
+#2 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('first', Array)
+#3 E:\Projects\CP\app\Controller\NotificationSchedulesController.php(165): Model->find('first', Array)
+#4 [internal function]: NotificationSchedulesController->user()
+#5 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(NotificationSchedulesController), Array)
+#6 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NotificationSchedulesController), Object(CakeRequest))
+#8 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2017-04-27 01:38:39 Error: [MissingTableException] Table unique_users for model UniqueUser was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'unique_users',
+  'class' => 'UniqueUser',
+  'ds' => 'default',
+)
+Request URL: /users/unique_users
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Model.php(3644): Model->setSource('unique_users')
+#1 E:\Projects\CP\lib\Cake\Model\Model.php(3022): Model->getDataSource()
+#2 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#3 E:\Projects\CP\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#4 E:\Projects\CP\lib\Cake\Controller\Controller.php(1086): PaginatorComponent->paginate('UniqueUser', Array, Array)
+#5 E:\Projects\CP\app\Controller\UsersController.php(2443): Controller->paginate('UniqueUser')
+#6 [internal function]: UsersController->unique_users()
+#7 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-27 02:15:13 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserAnalyti1c.user_id' in 'where clause'
+Request URL: /user_analytics?user_id=asdad
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `UserAna...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `UserAna...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `UserAna...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(UserAnalytic), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\app\Controller\UserAnalyticsController.php(18): Model->find('all', Array)
+#7 [internal function]: UserAnalyticsController->index()
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UserAnalyticsController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserAnalyticsController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-04-27 02:15:35 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserAnalyti1c.user_id' in 'where clause'
+Request URL: /user_analytics?user_id=12121
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `UserAna...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `UserAna...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `UserAna...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(UserAnalytic), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\app\Controller\UserAnalyticsController.php(18): Model->find('all', Array)
+#7 [internal function]: UserAnalyticsController->index()
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UserAnalyticsController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserAnalyticsController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-04-27 02:18:09 Error: [MissingTableException] Table lucid_codes for model LucidCode was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'lucid_codes',
+  'class' => 'LucidCode',
+  'ds' => 'default',
+)
+Request URL: /lucid_codes
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Model.php(3644): Model->setSource('lucid_codes')
+#1 E:\Projects\CP\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#2 E:\Projects\CP\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 E:\Projects\CP\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('LucidCode', 'fields')
+#4 E:\Projects\CP\app\View\LucidCodes\index.ctp(12): FormHelper->create('LucidCode', Array)
+#5 E:\Projects\CP\lib\Cake\View\View.php(961): include('E:\Projects\CP\...')
+#6 E:\Projects\CP\lib\Cake\View\View.php(923): View->_evaluate('E:\Projects\CP\...', Array)
+#7 E:\Projects\CP\lib\Cake\View\View.php(473): View->_render('E:\Projects\CP\...')
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(LucidCodesController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-05-03 02:13:01 Error: [MissingViewException] View file "SmsLogs\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'SmsLogs\\index.ctp',
+)
+Request URL: /sms_logs
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 E:\Projects\CP\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SmsLogsController), Object(CakeRequest))
+#4 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-05-03 02:18:39 Error: [MissingViewException] View file "SmsLogs\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'SmsLogs\\index.ctp',
+)
+Request URL: /sms_logs
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 E:\Projects\CP\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SmsLogsController), Object(CakeRequest))
+#4 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-05-03 02:19:39 Error: [MissingViewException] View file "SmsLogs\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'SmsLogs\\index.ctp',
+)
+Request URL: /sms_logs
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 E:\Projects\CP\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SmsLogsController), Object(CakeRequest))
+#4 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-05-03 02:20:42 Error: [MissingViewException] View file "SmsLogs\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'SmsLogs\\index.ctp',
+)
+Request URL: /sms_logs
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 E:\Projects\CP\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SmsLogsController), Object(CakeRequest))
+#4 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-05-03 02:24:32 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\Projects\CP\app\Controller\SmsLogsController.php, line 15]
+2017-05-03 02:24:32 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /sms_logs
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\Projects\CP\...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\Projects\CP\...', 15, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\Projects\CP\...', 15, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-05-03 02:24:49 Error: [MissingTableException] Table verify_sms_logs for model VerifySmsLog was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'verify_sms_logs',
+  'class' => 'VerifySmsLog',
+  'ds' => 'default',
+)
+Request URL: /sms_logs
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Model.php(3644): Model->setSource('verify_sms_logs')
+#1 E:\Projects\CP\lib\Cake\Model\Model.php(3022): Model->getDataSource()
+#2 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#3 E:\Projects\CP\app\Controller\SmsLogsController.php(17): Model->find('all', Array)
+#4 [internal function]: SmsLogsController->index()
+#5 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SmsLogsController), Array)
+#6 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SmsLogsController), Object(CakeRequest))
+#8 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2017-05-03 02:25:30 Error: [MissingTableException] Table verify_sms_logs for model VerifySmsLog was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'verify_sms_logs',
+  'class' => 'VerifySmsLog',
+  'ds' => 'default',
+)
+Request URL: /sms_logs
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Model.php(3644): Model->setSource('verify_sms_logs')
+#1 E:\Projects\CP\lib\Cake\Model\Model.php(3022): Model->getDataSource()
+#2 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#3 E:\Projects\CP\app\Controller\SmsLogsController.php(17): Model->find('all', Array)
+#4 [internal function]: SmsLogsController->index()
+#5 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SmsLogsController), Array)
+#6 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SmsLogsController), Object(CakeRequest))
+#8 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2017-05-03 02:25:30 Error: [MissingTableException] Table verify_sms_logs for model VerifySmsLog was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'verify_sms_logs',
+  'class' => 'VerifySmsLog',
+  'ds' => 'default',
+)
+Request URL: /sms_logs
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Model.php(3644): Model->setSource('verify_sms_logs')
+#1 E:\Projects\CP\lib\Cake\Model\Model.php(3022): Model->getDataSource()
+#2 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#3 E:\Projects\CP\app\Controller\SmsLogsController.php(17): Model->find('all', Array)
+#4 [internal function]: SmsLogsController->index()
+#5 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SmsLogsController), Array)
+#6 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SmsLogsController), Object(CakeRequest))
+#8 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2017-05-03 02:28:15 Error: [MissingTableException] Table verify_sms_logs for model VerifySmsLog was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'verify_sms_logs',
+  'class' => 'VerifySmsLog',
+  'ds' => 'default',
+)
+Request URL: /sms_logs
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Model.php(3644): Model->setSource('verify_sms_logs')
+#1 E:\Projects\CP\lib\Cake\Model\Model.php(3022): Model->getDataSource()
+#2 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#3 E:\Projects\CP\app\Controller\SmsLogsController.php(17): Model->find('all', Array)
+#4 [internal function]: SmsLogsController->index()
+#5 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SmsLogsController), Array)
+#6 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SmsLogsController), Object(CakeRequest))
+#8 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2017-05-03 02:29:27 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\Projects\CP\app\Controller\SmsLogsController.php, line 15]
+2017-05-03 02:29:27 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /sms_logs
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\Projects\CP\...', 15)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\Projects\CP\...', 15, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\Projects\CP\...', 15, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-05-03 08:03:28 Error: [MissingTableException] Table sms_logs for model SmsLog was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'sms_logs',
+  'class' => 'SmsLog',
+  'ds' => 'default',
+)
+Request URL: /sms_logs
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Model.php(3644): Model->setSource('sms_logs')
+#1 E:\Projects\CP\lib\Cake\Model\Model.php(1387): Model->getDataSource()
+#2 E:\Projects\CP\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 E:\Projects\CP\lib\Cake\View\Helper\FormHelper.php(468): FormHelper->_introspectModel('SmsLog', 'fields')
+#4 E:\Projects\CP\app\View\SmsLogs\index.ctp(18): FormHelper->create('SmsLog', Array)
+#5 E:\Projects\CP\lib\Cake\View\View.php(961): include('E:\Projects\CP\...')
+#6 E:\Projects\CP\lib\Cake\View\View.php(923): View->_evaluate('E:\Projects\CP\...', Array)
+#7 E:\Projects\CP\lib\Cake\View\View.php(473): View->_render('E:\Projects\CP\...')
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SmsLogsController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-05-03 08:36:13 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Admin.verification_sms_log_id' in 'on clause'
+Request URL: /sms_logs
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Verific...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Verific...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Verific...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(VerificationSmsLog), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\app\Controller\SmsLogsController.php(18): Model->find('all', Array)
+#7 [internal function]: SmsLogsController->index()
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SmsLogsController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SmsLogsController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-05-03 16:04:23 Error: [ConfigureException] E:\Projects\CP\app\Config\email.php not found.
+Request URL: /admins/forgot_password
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Network\Email\CakeEmail.php(1136): CakeEmail->_applyConfig('mailgun')
+#1 E:\Projects\CP\app\Controller\AdminsController.php(282): CakeEmail->config('mailgun')
+#2 [internal function]: AdminsController->forgot_password()
+#3 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(AdminsController), Array)
+#4 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#5 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest))
+#6 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2017-05-03 16:05:27 Error: [ConfigureException] E:\Projects\CP\app\Config\email.php not found.
+Request URL: /admins/forgot_password
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Network\Email\CakeEmail.php(1136): CakeEmail->_applyConfig('mailgun')
+#1 E:\Projects\CP\app\Controller\AdminsController.php(282): CakeEmail->config('mailgun')
+#2 [internal function]: AdminsController->forgot_password()
+#3 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(AdminsController), Array)
+#4 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#5 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest))
+#6 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2017-05-03 16:06:05 Error: [ConfigureException] Unknown email configuration "mailgun".
+Request URL: /admins/forgot_password
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Network\Email\CakeEmail.php(1136): CakeEmail->_applyConfig('mailgun')
+#1 E:\Projects\CP\app\Controller\AdminsController.php(282): CakeEmail->config('mailgun')
+#2 [internal function]: AdminsController->forgot_password()
+#3 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(AdminsController), Array)
+#4 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#5 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest))
+#6 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2017-05-03 19:36:05 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\Projects\CP\app\Controller\AdminsController.php, line 448]
+2017-05-03 19:36:05 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /admins/verify_email/590a2d3c-1ef4-4fc2-af35-0660f61854e2/
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\Projects\CP\...', 448)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\Projects\CP\...', 448, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\Projects\CP\...', 448, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-05-04 02:10:30 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'AdminNonce1.nonce' in 'where clause'
+Request URL: /admins/verify_email/590a8c2b-b8f4-4d7c-8334-0370f61854e2/
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `AdminNo...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `AdminNo...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `AdminNo...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(AdminNonce), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('first', Array)
+#6 E:\Projects\CP\app\Controller\AdminsController.php(453): Model->find('first', Array)
+#7 [internal function]: AdminsController->verify_email('590a8c2b-b8f4-4...')
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(AdminsController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdminsController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-05-04 17:47:41 Error: Fatal Error (4): syntax error, unexpected ';' in [E:\Projects\CP\app\Controller\AdminsController.php, line 347]
+2017-05-04 17:47:41 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /admins/login
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 347)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 347, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 347, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-05-06 19:12:44 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'VerificationSmsLog.admin_id' in 'on clause'
+Request URL: /sms_logs
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Verific...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Verific...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Verific...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(VerificationSmsLog), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 E:\Projects\CP\lib\Cake\Controller\Controller.php(1086): PaginatorComponent->paginate('VerificationSms...', Array, Array)
+#8 E:\Projects\CP\app\Controller\SmsLogsController.php(26): Controller->paginate('VerificationSms...')
+#9 [internal function]: SmsLogsController->index()
+#10 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SmsLogsController), Array)
+#11 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SmsLogsController), Object(CakeRequest))
+#13 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2017-05-06 19:49:05 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'VerificationSmsLog.admin_id' in 'on clause'
+Request URL: /sms_logs
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Verific...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Verific...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Verific...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(VerificationSmsLog), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 E:\Projects\CP\lib\Cake\Controller\Controller.php(1086): PaginatorComponent->paginate('VerificationSms...', Array, Array)
+#8 E:\Projects\CP\app\Controller\SmsLogsController.php(26): Controller->paginate('VerificationSms...')
+#9 [internal function]: SmsLogsController->index()
+#10 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SmsLogsController), Array)
+#11 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SmsLogsController), Object(CakeRequest))
+#13 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2017-05-06 20:09:03 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'VerificationSmsLog1.created' in 'order clause'
+Request URL: /sms_logs/index/page:2
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Verific...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Verific...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Verific...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(VerificationSmsLog), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 E:\Projects\CP\lib\Cake\Controller\Controller.php(1086): PaginatorComponent->paginate('VerificationSms...', Array, Array)
+#8 E:\Projects\CP\app\Controller\SmsLogsController.php(34): Controller->paginate('VerificationSms...')
+#9 [internal function]: SmsLogsController->index()
+#10 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SmsLogsController), Array)
+#11 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SmsLogsController), Object(CakeRequest))
+#13 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2017-05-06 20:15:06 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'VerificationSmsLog1.created' in 'order clause'
+Request URL: /sms_logs/index/page:2
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Verific...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Verific...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Verific...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(VerificationSmsLog), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 E:\Projects\CP\lib\Cake\Controller\Controller.php(1086): PaginatorComponent->paginate('VerificationSms...', Array, Array)
+#8 E:\Projects\CP\app\Controller\SmsLogsController.php(34): Controller->paginate('VerificationSms...')
+#9 [internal function]: SmsLogsController->index()
+#10 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SmsLogsController), Array)
+#11 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SmsLogsController), Object(CakeRequest))
+#13 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2017-05-06 20:24:13 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'VerificationSmsLog1.created' in 'order clause'
+Request URL: /sms_logs/index/page:2
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Verific...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Verific...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Verific...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(VerificationSmsLog), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 E:\Projects\CP\lib\Cake\Controller\Controller.php(1086): PaginatorComponent->paginate('VerificationSms...', Array, Array)
+#8 E:\Projects\CP\app\Controller\SmsLogsController.php(34): Controller->paginate('VerificationSms...')
+#9 [internal function]: SmsLogsController->index()
+#10 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SmsLogsController), Array)
+#11 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SmsLogsController), Object(CakeRequest))
+#13 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2017-05-06 20:29:09 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'VerificationSmsLog.VerificationSmsLog.user_id' in 'on clause'
+Request URL: /sms_logs
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Verific...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Verific...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Verific...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(VerificationSmsLog), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 E:\Projects\CP\lib\Cake\Controller\Controller.php(1086): PaginatorComponent->paginate('VerificationSms...', Array, Array)
+#8 E:\Projects\CP\app\Controller\SmsLogsController.php(40): Controller->paginate('VerificationSms...')
+#9 [internal function]: SmsLogsController->index()
+#10 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SmsLogsController), Array)
+#11 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SmsLogsController), Object(CakeRequest))
+#13 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2017-05-06 20:45:27 Error: [NotFoundException] Not Found
+Request URL: /sms_logs/index/page:2?from=&type=user
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Controller\Controller.php(1086): PaginatorComponent->paginate('VerificationSms...', Array, Array)
+#1 E:\Projects\CP\app\Controller\SmsLogsController.php(43): Controller->paginate('VerificationSms...')
+#2 [internal function]: SmsLogsController->index()
+#3 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SmsLogsController), Array)
+#4 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#5 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SmsLogsController), Object(CakeRequest))
+#6 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2017-07-06 01:58:44 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.flexid_request_id' in 'on clause'
+Request URL: /flexid_requests
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `FlexidR...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `FlexidR...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `FlexidR...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(FlexidRequest), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\app\Controller\FlexidRequestsController.php(17): Model->find('all', Array)
+#7 [internal function]: FlexidRequestsController->index()
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(FlexidRequestsController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FlexidRequestsController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-07-06 01:59:24 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.flexid_request_id' in 'on clause'
+Request URL: /flexid_requests
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `FlexidR...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `FlexidR...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `FlexidR...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(FlexidRequest), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\app\Controller\FlexidRequestsController.php(17): Model->find('all', Array)
+#7 [internal function]: FlexidRequestsController->index()
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(FlexidRequestsController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FlexidRequestsController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-07-06 02:00:17 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'FlexidResponse.flexid_request_id' in 'on clause'
+Request URL: /flexid_requests
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `FlexidR...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `FlexidR...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `FlexidR...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(FlexidRequest), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\app\Controller\FlexidRequestsController.php(18): Model->find('all', Array)
+#7 [internal function]: FlexidRequestsController->index()
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(FlexidRequestsController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FlexidRequestsController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-07-06 02:02:11 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'FlexidResponse.flexid_request_id' in 'on clause'
+Request URL: /flexid_requests
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `FlexidR...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `FlexidR...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `FlexidR...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(FlexidRequest), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\app\Controller\FlexidRequestsController.php(21): Model->find('all', Array)
+#7 [internal function]: FlexidRequestsController->index()
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(FlexidRequestsController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FlexidRequestsController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-07-06 02:04:25 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'FlexidResponse.flexid_request_id' in 'on clause'
+Request URL: /flexid_requests
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `FlexidR...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `FlexidR...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `FlexidR...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(FlexidRequest), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\app\Controller\FlexidRequestsController.php(22): Model->find('all', Array)
+#7 [internal function]: FlexidRequestsController->index()
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(FlexidRequestsController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FlexidRequestsController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-07-06 02:07:22 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'FlexidResponse.flexid_request_id' in 'on clause'
+Request URL: /flexid_requests
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `FlexidR...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `FlexidR...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `FlexidR...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(FlexidRequest), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\app\Controller\FlexidRequestsController.php(22): Model->find('all', Array)
+#7 [internal function]: FlexidRequestsController->index()
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(FlexidRequestsController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FlexidRequestsController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-07-06 02:13:06 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.user_name' in 'field list'
+Request URL: /flexid_requests
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `FlexidR...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `FlexidR...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `FlexidR...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(FlexidRequest), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\app\Controller\FlexidRequestsController.php(22): Model->find('all', Array)
+#7 [internal function]: FlexidRequestsController->index()
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(FlexidRequestsController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FlexidRequestsController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-07-06 15:42:20 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'FlexidRequest.created' in 'where clause'
+Request URL: /flexid_requests?date=07%2F07%2F2017
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `FlexidR...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `FlexidR...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `FlexidR...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(FlexidRequest), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 E:\Projects\CP\lib\Cake\Controller\Controller.php(1086): PaginatorComponent->paginate('FlexidRequest', Array, Array)
+#8 E:\Projects\CP\app\Controller\FlexidRequestsController.php(34): Controller->paginate('FlexidRequest')
+#9 [internal function]: FlexidRequestsController->index()
+#10 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(FlexidRequestsController), Array)
+#11 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FlexidRequestsController), Object(CakeRequest))
+#13 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2017-07-06 15:44:06 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'FlexidRequest.created' in 'where clause'
+Request URL: /flexid_requests?date=07%2F07%2F2017
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `FlexidR...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `FlexidR...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `FlexidR...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(FlexidRequest), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 E:\Projects\CP\lib\Cake\Controller\Controller.php(1086): PaginatorComponent->paginate('FlexidRequest', Array, Array)
+#8 E:\Projects\CP\app\Controller\FlexidRequestsController.php(34): Controller->paginate('FlexidRequest')
+#9 [internal function]: FlexidRequestsController->index()
+#10 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(FlexidRequestsController), Array)
+#11 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(FlexidRequestsController), Object(CakeRequest))
+#13 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2017-07-07 16:57:45 Error: [MissingViewException] View file "Clicks\add_distributions.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Clicks\\add_distributions.ctp',
+)
+Request URL: /clicks/add_distributions/1
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 E:\Projects\CP\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClicksController), Object(CakeRequest))
+#4 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-07-07 18:37:36 Error: Fatal Error (4): syntax error, unexpected '[' in [E:\Projects\CP\app\View\Helper\CalculatorHelper.php, line 215]
+2017-07-07 18:37:36 Error: [FatalErrorException] syntax error, unexpected '['
+Request URL: /transactions/withdrawals
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 215)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 215, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 215, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-07-07 18:37:40 Error: Fatal Error (4): syntax error, unexpected '[' in [E:\Projects\CP\app\View\Helper\CalculatorHelper.php, line 215]
+2017-07-07 18:37:40 Error: [FatalErrorException] syntax error, unexpected '['
+Request URL: /transactions/withdrawals_requested
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 215)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 215, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 215, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-07-07 18:37:56 Error: Fatal Error (4): syntax error, unexpected '[' in [E:\Projects\CP\app\View\Helper\CalculatorHelper.php, line 215]
+2017-07-07 18:37:56 Error: [FatalErrorException] syntax error, unexpected '['
+Request URL: /transactions?error=1
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 215)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 215, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 215, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-07-07 19:26:36 Error: Fatal Error (1): Call to a member function bindModel() on a non-object in [E:\Projects\CP\app\Controller\ClicksController.php, line 22]
+2017-07-07 19:26:36 Error: [FatalErrorException] Call to a member function bindModel() on a non-object
+Request URL: /clicks/add_distributions/1
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\Projects\CP\...', 22)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\Projects\CP\...', 22, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\Projects\CP\...', 22, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-07-08 02:10:16 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ClickTemplateDistribtion.click_template_id' in 'where clause'
+Request URL: /clicks/add_distributions/1
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `ClickTe...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `ClickTe...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `ClickTe...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(ClickTemplateDistribution), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\app\Controller\ClicksController.php(66): Model->find('all', Array)
+#7 [internal function]: ClicksController->add_distributions('1')
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ClicksController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClicksController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-07-08 02:11:57 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ClickTemplate.click_template_distribution_id' in 'on clause'
+Request URL: /clicks/add_distributions/1
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `ClickTe...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `ClickTe...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `ClickTe...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(ClickTemplateDistribution), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\app\Controller\ClicksController.php(66): Model->find('all', Array)
+#7 [internal function]: ClicksController->add_distributions('1')
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ClicksController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClicksController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-07-12 09:51:51 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'percentage' cannot be null
+Request URL: /clicks/add_distributions/1
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `mi...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `mi...')
+#3 E:\Projects\CP\lib\Cake\Model\Model.php(1928): DboSource->create(Object(ClickTemplateDistribution), Array, Array)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(1751): Model->_doSave(Array, Array)
+#5 E:\Projects\CP\app\Controller\ClicksController.php(22): Model->save(Array)
+#6 [internal function]: ClicksController->add_distributions('1')
+#7 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ClicksController), Array)
+#8 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClicksController), Object(CakeRequest))
+#10 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-07-12 12:50:38 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ClickTempateDistribution.percentage' in 'field list'
+Request URL: /clicks/add_distributions/1
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT SUM(`Cli...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT SUM(`Cli...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT SUM(`Cli...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(ClickTemplateDistribution), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('first', Array)
+#6 E:\Projects\CP\app\Controller\ClicksController.php(29): Model->find('first', Array)
+#7 [internal function]: ClicksController->add_distributions('1')
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ClicksController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClicksController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-07-12 12:51:27 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ClickTempateDistribution.percentage' in 'field list'
+Request URL: /clicks/add_distributions/1
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT SUM(`Cli...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT SUM(`Cli...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT SUM(`Cli...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(ClickTemplateDistribution), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 E:\Projects\CP\app\Controller\ClicksController.php(29): Model->find('all', Array)
+#7 [internal function]: ClicksController->add_distributions('1')
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ClicksController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClicksController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-07-12 16:14:50 Error: Fatal Error (4): syntax error, unexpected T_IF in [E:\Projects\CP\app\Controller\ClicksController.php, line 48]
+2017-07-12 16:14:50 Error: [FatalErrorException] syntax error, unexpected T_IF
+Request URL: /clicks/add_distributions/1
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 48)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 48, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 48, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-07-12 16:20:54 Error: Fatal Error (4): syntax error, unexpected T_INC, expecting ')' in [E:\Projects\CP\app\Controller\ClicksController.php, line 47]
+2017-07-12 16:20:54 Error: [FatalErrorException] syntax error, unexpected T_INC, expecting ')'
+Request URL: /clicks/add_distributions/1
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 47)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 47, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 47, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-07-12 19:28:00 Error: [MissingTableException] Table question_statistics for model QuestionStatistic was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'question_statistics',
+  'class' => 'QuestionStatistic',
+  'ds' => 'default',
+)
+Request URL: /question_statistics
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Model.php(3644): Model->setSource('question_statis...')
+#1 E:\Projects\CP\lib\Cake\Model\Model.php(3022): Model->getDataSource()
+#2 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#3 E:\Projects\CP\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#4 E:\Projects\CP\lib\Cake\Controller\Controller.php(1086): PaginatorComponent->paginate('QuestionStatist...', Array, Array)
+#5 E:\Projects\CP\app\Controller\QuestionStatisticsController.php(47): Controller->paginate('QuestionStatist...')
+#6 [internal function]: QuestionStatisticsController->index()
+#7 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(QuestionStatisticsController), Array)
+#8 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(QuestionStatisticsController), Object(CakeRequest))
+#10 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-07-12 19:54:23 Error: [MissingViewException] View file "Clicks\delete_distribution.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Clicks\\delete_distribution.ctp',
+)
+Request URL: /clicks/delete_distribution/?id=101
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 E:\Projects\CP\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClicksController), Object(CakeRequest))
+#4 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-07-12 19:54:36 Error: [MissingViewException] View file "Clicks\delete_distribution.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Clicks\\delete_distribution.ctp',
+)
+Request URL: /clicks/delete_distribution/?id=101
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 E:\Projects\CP\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClicksController), Object(CakeRequest))
+#4 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-07-12 19:55:43 Error: [MissingViewException] View file "Clicks\delete_distribution.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Clicks\\delete_distribution.ctp',
+)
+Request URL: /clicks/delete_distribution/?id=101
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 E:\Projects\CP\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClicksController), Object(CakeRequest))
+#4 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-07-12 19:56:15 Error: [MissingViewException] View file "Clicks\delete_distribution.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Clicks\\delete_distribution.ctp',
+)
+Request URL: /clicks/delete_distribution/?id=101
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 E:\Projects\CP\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClicksController), Object(CakeRequest))
+#4 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-07-14 16:14:23 Error: [MissingViewException] View file "Clicks\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Clicks\\index.ctp',
+)
+Request URL: /clicks
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 E:\Projects\CP\lib\Cake\Controller\Controller.php(960): View->render(NULL, NULL)
+#2 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ClicksController), Object(CakeRequest))
+#4 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-07-18 18:55:16 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\Projects\CP\app\Controller\SurveysController.php, line 4114]
+2017-07-18 18:55:17 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /surveys/ajax_click_templates/1011
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\Projects\CP\...', 4114)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\Projects\CP\...', 4114, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\Projects\CP\...', 4114, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-07-18 18:56:00 Error: Fatal Error (1): Call to a member function find() on a non-object in [E:\Projects\CP\app\Controller\SurveysController.php, line 4123]
+2017-07-18 18:56:00 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /surveys/ajax_click_templates/1011
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'E:\Projects\CP\...', 4123)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'E:\Projects\CP\...', 4123, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'E:\Projects\CP\...', 4123, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-07-18 21:49:52 Error: Fatal Error (4): syntax error, unexpected T_SL, expecting T_FUNCTION in [E:\Projects\CP\app\Controller\SurveysController.php, line 4106]
+2017-07-18 21:49:53 Error: [FatalErrorException] syntax error, unexpected T_SL, expecting T_FUNCTION
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4106)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4106, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 4106, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-07-18 21:50:00 Error: Fatal Error (4): syntax error, unexpected T_SL, expecting T_FUNCTION in [E:\Projects\CP\app\Controller\SurveysController.php, line 4106]
+2017-07-18 21:50:00 Error: [FatalErrorException] syntax error, unexpected T_SL, expecting T_FUNCTION
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4106)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4106, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 4106, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-07-18 21:50:08 Error: Fatal Error (4): syntax error, unexpected T_SL, expecting T_FUNCTION in [E:\Projects\CP\app\Controller\SurveysController.php, line 4106]
+2017-07-18 21:50:08 Error: [FatalErrorException] syntax error, unexpected T_SL, expecting T_FUNCTION
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4106)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4106, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 4106, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-07-18 21:50:16 Error: Fatal Error (4): syntax error, unexpected T_SL, expecting T_FUNCTION in [E:\Projects\CP\app\Controller\SurveysController.php, line 4106]
+2017-07-18 21:50:16 Error: [FatalErrorException] syntax error, unexpected T_SL, expecting T_FUNCTION
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4106)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4106, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 4106, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-07-18 21:50:24 Error: Fatal Error (4): syntax error, unexpected T_SL, expecting T_FUNCTION in [E:\Projects\CP\app\Controller\SurveysController.php, line 4106]
+2017-07-18 21:50:24 Error: [FatalErrorException] syntax error, unexpected T_SL, expecting T_FUNCTION
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4106)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4106, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 4106, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-07-18 21:50:32 Error: Fatal Error (4): syntax error, unexpected T_SL, expecting T_FUNCTION in [E:\Projects\CP\app\Controller\SurveysController.php, line 4106]
+2017-07-18 21:50:32 Error: [FatalErrorException] syntax error, unexpected T_SL, expecting T_FUNCTION
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4106)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4106, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 4106, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-07-18 21:50:40 Error: Fatal Error (4): syntax error, unexpected T_SL, expecting T_FUNCTION in [E:\Projects\CP\app\Controller\SurveysController.php, line 4106]
+2017-07-18 21:50:40 Error: [FatalErrorException] syntax error, unexpected T_SL, expecting T_FUNCTION
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4106)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4106, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 4106, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-07-18 21:50:48 Error: Fatal Error (4): syntax error, unexpected T_SL, expecting T_FUNCTION in [E:\Projects\CP\app\Controller\SurveysController.php, line 4106]
+2017-07-18 21:50:48 Error: [FatalErrorException] syntax error, unexpected T_SL, expecting T_FUNCTION
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4106)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4106, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 4106, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-07-18 21:50:56 Error: Fatal Error (4): syntax error, unexpected T_SL, expecting T_FUNCTION in [E:\Projects\CP\app\Controller\SurveysController.php, line 4106]
+2017-07-18 21:50:56 Error: [FatalErrorException] syntax error, unexpected T_SL, expecting T_FUNCTION
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4106)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4106, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 4106, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-07-19 17:45:45 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ClickTemplateDistribution.percentage' in 'field list'
+Request URL: /surveys/ajax_click_templates/1011
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT SUM(`Cli...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT SUM(`Cli...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT SUM(`Cli...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(ProjectClickDistribution), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('first', Array)
+#6 E:\Projects\CP\app\Controller\SurveysController.php(4309): Model->find('first', Array)
+#7 [internal function]: SurveysController->ajax_click_templates('1011')
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SurveysController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SurveysController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-07-19 18:20:26 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ProjectClickDistribution.click_template_id' in 'where clause'
+Request URL: /surveys/ajax_click_templates/1011
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Project...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Project...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Project...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(ProjectClickDistribution), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('first', Array)
+#6 E:\Projects\CP\app\Controller\SurveysController.php(4357): Model->find('first', Array)
+#7 [internal function]: SurveysController->ajax_click_templates('1011')
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SurveysController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SurveysController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-07-19 20:37:38 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ClickTemplateDistribution.project_id' in 'where clause'
+Request URL: /surveys/ajax_click_templates/1011
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Project...', Array)
+#2 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Project...', Array, Array)
+#3 E:\Projects\CP\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Project...', false)
+#4 E:\Projects\CP\lib\Cake\Model\Model.php(3022): DboSource->read(Object(ProjectClickDistribution), Array)
+#5 E:\Projects\CP\lib\Cake\Model\Model.php(2994): Model->_readDataSource('first', Array)
+#6 E:\Projects\CP\app\Controller\SurveysController.php(4444): Model->find('first', Array)
+#7 [internal function]: SurveysController->ajax_click_templates('1011')
+#8 E:\Projects\CP\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(SurveysController), Array)
+#9 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 E:\Projects\CP\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(SurveysController), Object(CakeRequest))
+#11 E:\Projects\CP\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-07-21 03:04:28 Error: Fatal Error (4): syntax error, unexpected ')' in [E:\Projects\CP\app\Controller\SurveysController.php, line 4707]
+2017-07-21 03:04:28 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4707)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4707, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 4707, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-07-21 03:04:36 Error: Fatal Error (4): syntax error, unexpected ')' in [E:\Projects\CP\app\Controller\SurveysController.php, line 4707]
+2017-07-21 03:04:36 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4707)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4707, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 4707, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-07-21 03:04:44 Error: Fatal Error (4): syntax error, unexpected ')' in [E:\Projects\CP\app\Controller\SurveysController.php, line 4707]
+2017-07-21 03:04:44 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4707)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4707, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 4707, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-07-21 03:04:52 Error: Fatal Error (4): syntax error, unexpected ')' in [E:\Projects\CP\app\Controller\SurveysController.php, line 4707]
+2017-07-21 03:04:52 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4707)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4707, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 4707, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-07-21 03:05:00 Error: Fatal Error (4): syntax error, unexpected ')' in [E:\Projects\CP\app\Controller\SurveysController.php, line 4707]
+2017-07-21 03:05:00 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4707)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4707, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 4707, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-07-21 03:05:08 Error: Fatal Error (4): syntax error, unexpected ')' in [E:\Projects\CP\app\Controller\SurveysController.php, line 4707]
+2017-07-21 03:05:08 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4707)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4707, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 4707, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-07-21 03:05:16 Error: Fatal Error (4): syntax error, unexpected ')' in [E:\Projects\CP\app\Controller\SurveysController.php, line 4707]
+2017-07-21 03:05:16 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4707)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4707, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 4707, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-07-21 03:05:24 Error: Fatal Error (4): syntax error, unexpected ')' in [E:\Projects\CP\app\Controller\SurveysController.php, line 4707]
+2017-07-21 03:05:24 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /surveys/ajax_get_processing
+Stack Trace:
+#0 E:\Projects\CP\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4707)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'E:\Projects\CP\...', 4707, Array)
+#2 E:\Projects\CP\lib\Cake\Core\App.php(933): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'E:\Projects\CP\...', 4707, Array)
+#3 E:\Projects\CP\lib\Cake\Core\App.php(906): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

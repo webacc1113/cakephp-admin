@@ -1,0 +1,21 @@
+2017-03-23 03:19:31 Lucid.qe2: [AHFR] Starting qualifications
+2017-03-23 03:19:31 Lucid.qe2: [AHFR] FAILED: You need to define the lucid_project_id
+2017-03-23 03:19:31 Lucid.qe2: [AHFR] Completed qualifications (Execution time: 0.013711929321289)
+2017-03-24 09:40:08 Lucid.qe2: [Y4ED] Starting qualifications
+2017-03-24 09:40:08 Lucid.qe2: [Y4ED] FAILED: You need to define the lucid_project_id
+2017-03-24 09:40:08 Lucid.qe2: [Y4ED] Completed qualifications (Execution time: 0.017850160598755)
+2017-03-28 08:43:36 Lucid.qe2: [4RM5] Starting qualifications
+2017-03-28 08:43:36 Lucid.qe2: [4RM5] FAILED: You need to define the lucid_project_id
+2017-03-28 08:43:36 Lucid.qe2: [4RM5] Completed qualifications (Execution time: 0.019238948822021)
+2017-03-31 08:10:50 Lucid.qe2: [Y6SA] Starting qualifications
+2017-03-31 08:10:50 Lucid.qe2: [Y6SA] FAILED: You need to define the lucid_project_id
+2017-03-31 08:10:50 Lucid.qe2: [Y6SA] Completed qualifications (Execution time: 0.028094053268433)
+2017-03-31 08:22:19 Lucid.qe2: [GE2K] Starting qualifications
+2017-03-31 08:22:36 Lucid.qe2: [X7R6] Starting qualifications
+2017-03-31 08:22:36 Lucid.qe2: [X7R6] FAILED: You need to define the lucid_project_id
+2017-03-31 08:22:36 Lucid.qe2: [X7R6] Completed qualifications (Execution time: 0.011032819747925)
+2017-03-31 08:23:07 Lucid.qe2: [HDK5] Starting qualifications
+2017-03-31 08:23:07 Lucid.qe2: [HDK5] FAILED: Could not locate the MV project that is associated with #F1011
+2017-03-31 08:23:07 Lucid.qe2: [HDK5] Completed qualifications (Execution time: 0.32165503501892)
+2017-03-31 08:23:53 Lucid.qe2: [1AHP] Starting qualifications
+2017-03-31 08:24:05 Lucid.qe2: [TFWS] Starting qualifications

@@ -1,0 +1,1 @@
+/* look in the mintvine/www/app/Config/schema.sql folder */

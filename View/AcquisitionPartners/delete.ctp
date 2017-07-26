@@ -1,0 +1,2 @@
+<?php echo $this->Form->input('AcquisitionPartner.id', array('type' => 'hidden', 'value' => $acquisition_partner['AcquisitionPartner']['id']))?>
+Are you sure you want to delete "<?php echo $acquisition_partner['AcquisitionPartner']['name']?>" Acquisition Partner?

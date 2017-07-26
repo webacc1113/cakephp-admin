@@ -1,0 +1,1 @@
+<pre><?php print_r(json_decode($project_log['ProjectLog']['failed_data']));?></pre>

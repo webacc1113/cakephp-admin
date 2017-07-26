@@ -1,0 +1,2 @@
+<?php echo $this->Form->input('LanderUrl.id', array('type' => 'hidden', 'value' => $lander_url['LanderUrl']['id'])) ?>
+Are you sure you want to delete <?php echo ($lander_url['LanderUrl']['name']) ? '"'.$lander_url['LanderUrl']['name'].'"' : ''; ?> Lander Url?

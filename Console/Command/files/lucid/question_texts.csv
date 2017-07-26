@@ -1,0 +1,484 @@
+id,question_id,country_id,text,created
+1,1,1,What is your age? / Quel est votre âge?,2016-07-13 00:10:41
+124,1,2,What is your age?,2016-07-13 00:10:41
+249,1,3,What is your age?,2016-07-13 00:10:42
+2,2,1,Etes-vous..? / Are you..? ,2016-07-13 00:10:41
+125,2,2,What is your gender?,2016-07-13 00:10:41
+250,2,3,What is your gender?,2016-07-13 00:10:42
+3,3,1,What is your relationship status ?,2016-07-13 00:10:41
+126,3,2,What is your relationship status?,2016-07-13 00:10:41
+260,3,3,What is your relationship status?,2016-07-13 00:10:42
+4,4,1,What is the highest level of education you have completed?,2016-07-13 00:10:41
+127,4,2,What is the highest level of education you have completed?,2016-07-13 00:10:41
+261,4,3,What is the highest level of education you have completed?,2016-07-13 00:10:42
+5,5,1,"In your household, are you the person who makes most of the daily purchasing decisions?",2016-07-13 00:10:41
+128,5,2,"In your household, are you the person who makes most of the daily purchasing decisions?",2016-07-13 00:10:41
+263,5,3,"In your household, are you the person who makes most of the daily purchasing decisions?
+",2016-07-13 00:10:42
+6,6,1,Which of the following pets are present in your household?,2016-07-13 00:10:41
+129,6,2,Which of the following pets are present in your household?,2016-07-13 00:10:41
+264,6,3,"Which of the following pets are present in your household?
+",2016-07-13 00:10:42
+7,7,1,What is your sexual orientation?,2016-07-13 00:10:41
+130,7,2,What is your sexual orientation?,2016-07-13 00:10:41
+265,7,3,"What is your sexual orientation?
+",2016-07-13 00:10:42
+8,8,1,How many people live in your household including yourself? ,2016-07-13 00:10:41
+131,8,2,How many people live in your household including yourself?,2016-07-13 00:10:41
+266,8,3,"How many people live in your household including yourself?
+",2016-07-13 00:10:42
+9,9,1,What best describes your current household?,2016-07-13 00:10:41
+132,9,2,What best describes your current household?,2016-07-13 00:10:41
+267,9,3,What best describes your current household?,2016-07-13 00:10:42
+10,10,1,"Do you, or does anyone in your household, work in any of the following industries?  / Vous le faites, ou at-il quelqu'un dans votre ménage, travailler dans n'importe quel des industries suivantes?",2016-07-13 00:10:41
+133,10,2,"Do you, or does anyone in your household, work in any of the following industries? ",2016-07-13 00:10:41
+268,10,3,"Do you, or does anyone in your household, work in any of the following industries?
+",2016-07-13 00:10:42
+11,11,1,Approximately what is the annual revenue for your organization?,2016-07-13 00:10:41
+134,11,2,Approximately what is the annual revenue for your organization?,2016-07-13 00:10:41
+269,11,3,"Approximately what is the annual revenue for your organization?
+",2016-07-13 00:10:42
+12,12,1,Which department do you primarily work within at your organization?,2016-07-13 00:10:41
+135,12,2,Which department do you primarily work within at your organization?,2016-07-13 00:10:41
+270,12,3,"Which department do you primarily work within at your organization?
+",2016-07-13 00:10:42
+13,13,1,Do you drive a car regularly?,2016-07-13 00:10:41
+136,13,2,Do you drive a car regularly?,2016-07-13 00:10:41
+271,13,3,"Do you drive a car regularly?
+",2016-07-13 00:10:42
+14,14,1,Are you the primary decision maker in your household for automotive-related purchases?,2016-07-13 00:10:41
+137,14,2,Are you the primary decision maker in your household for automotive-related purchases?,2016-07-13 00:10:41
+272,14,3,Are you the primary decision maker in your household for automotive-related purchases?,2016-07-13 00:10:42
+15,15,1,"If you own/lease a car(s), which brand(s) are they?",2016-07-13 00:10:41
+138,15,2,"If you own/lease a car(s), which brand(s) are they?",2016-07-13 00:10:41
+273,15,3,"If you own/lease a car(s), which brand(s) are they?
+",2016-07-13 00:10:42
+16,16,1,How would you describe the vehicle(s) you own/lease?,2016-07-13 00:10:41
+139,16,2,How would you describe the vehicle(s) you own/lease?,2016-07-13 00:10:41
+274,16,3,How would you describe the vehicle(s) you own/lease?,2016-07-13 00:10:42
+17,17,1,What year was your main vehicle (owned or leased) manufactured?,2016-07-13 00:10:41
+140,17,2,What year was your main vehicle (owned or leased) manufactured?,2016-07-13 00:10:41
+275,17,3,What year was your main vehicle (owned or leased) manufactured?,2016-07-13 00:10:42
+18,18,1,In which year did you purchase/lease your main vehicle?,2016-07-13 00:10:41
+141,18,2,In which year did you purchase/lease your main vehicle?,2016-07-13 00:10:41
+276,18,3,In which year did you purchase/lease your main vehicle?,2016-07-13 00:10:42
+19,19,1,If you own/lease a vehicle(s) did you buy them new or used?,2016-07-13 00:10:41
+142,19,2,If you own/lease a vehicle(s) did you buy them new or used?,2016-07-13 00:10:41
+277,19,3,"If you own/lease a vehicle(s) did you buy them new or used?
+",2016-07-13 00:10:42
+20,20,1,Do you own a motorcycle?,2016-07-13 00:10:41
+143,20,2,Do you own a motorcycle?,2016-07-13 00:10:41
+278,20,3,"Do you own a motorcycle?
+",2016-07-13 00:10:42
+21,21,1,How often do you eat fast food (any quick service restaurant) in any given week (on average)?,2016-07-13 00:10:41
+144,21,2,How often do you eat fast food (any quick service restaurant) in any given week (on average)?,2016-07-13 00:10:41
+279,21,3,"How often do you eat fast food (any quick service restaurant) in any given week (on average)?
+",2016-07-13 00:10:42
+22,22,1,Which fast food (quick service) restaurants have you visited ever?,2016-07-13 00:10:41
+145,22,2,Which fast food (quick service) restaurants have you visited ever?,2016-07-13 00:10:41
+280,22,3,"Which fast food (quick service) restaurants have you visited ever?
+",2016-07-13 00:10:42
+23,23,1,"Which, if any, of these drinks have you consumed in the past four weeks?",2016-07-13 00:10:41
+146,23,2,"Which, if any, of these drinks have you consumed in the past four weeks?",2016-07-13 00:10:41
+281,23,3,"Which, if any, of these drinks have you consumed in the past four weeks?
+",2016-07-13 00:10:42
+24,24,1,Which of the following beverages do your regularly consume?,2016-07-13 00:10:41
+147,24,2,Which of the following beverages do your regularly consume?,2016-07-13 00:10:41
+282,24,3,"Which of the following beverages do you regularly consume?
+",2016-07-13 00:10:42
+25,25,1,"On average, how many alcoholic drinks do you consume in a week?",2016-07-13 00:10:41
+148,25,2,"On average, how many alcoholic drinks do you consume in a week?",2016-07-13 00:10:41
+283,25,3,"On average, how many alcoholic drinks do you consume in a week?",2016-07-13 00:10:42
+26,26,1,What are your hobbies and interests?,2016-07-13 00:10:41
+149,26,2,What are your hobbies and interests?,2016-07-13 00:10:41
+284,26,3,What are your hobbies and interests?,2016-07-13 00:10:42
+27,27,1,How often do you go to the movie theater?,2016-07-13 00:10:41
+150,27,2,How often do you go to the movie theater?,2016-07-13 00:10:41
+285,27,3,How often do you go to the movie theater?,2016-07-13 00:10:42
+28,28,1,What kinds of movies do you watch when you go to the movie theater?,2016-07-13 00:10:41
+151,28,2,What kinds of movies do you watch when you go to the movie theater?,2016-07-13 00:10:41
+286,28,3,What kinds of movies do you watch when you go to the movie theater?,2016-07-13 00:10:42
+29,29,1,How frequently do you rent or download movies for home viewing (on average)?,2016-07-13 00:10:41
+152,29,2,How frequently do you rent or download movies for home viewing (on average)?,2016-07-13 00:10:41
+287,29,3,How frequently do you rent or download movies for home viewing (on average)?,2016-07-13 00:10:42
+30,30,1,How many DVDs/Blu-rays do you purchase on a monthly basis (on average)?,2016-07-13 00:10:41
+153,30,2,How many DVDs/Blu-rays do you purchase on a monthly basis (on average)?,2016-07-13 00:10:41
+288,30,3,How many DVDs/Blu-rays do you purchase on a monthly basis (on average)?,2016-07-13 00:10:42
+31,31,1,How many hours a week do you exercise/participate in sports?,2016-07-13 00:10:41
+154,31,2,How many hours a week do you exercise/participate in sports?,2016-07-13 00:10:41
+289,31,3,How many hours a week do you exercise/participate in sports?,2016-07-13 00:10:42
+32,32,1,What sports do you regularly participate in?,2016-07-13 00:10:41
+155,32,2,What sports do you regularly participate in?,2016-07-13 00:10:41
+290,32,3,"What sports do you regularly participate in?
+",2016-07-13 00:10:42
+33,33,1,What kind of gambling do you participate in?,2016-07-13 00:10:41
+156,33,2,What kind of gambling do you participate in?,2016-07-13 00:10:41
+291,33,3,What kind of gambling do you participate in?,2016-07-13 00:10:42
+34,34,1,Which of the following electronic products do you own?,2016-07-13 00:10:41
+157,34,2,Which of the following electronic products do you own?,2016-07-13 00:10:41
+292,34,3,Which of the following electronic products do you own?,2016-07-13 00:10:42
+35,35,1,Would you consider yourself to be an early adopter of new technology (the first to buy new gadgets/electronics/etc)?,2016-07-13 00:10:41
+158,35,2,Would you consider yourself to be an early adopter of new technology (the first to buy new gadgets/electronics/etc)?,2016-07-13 00:10:41
+293,35,3,Would you consider yourself to be an early adopter of new technology (the first to buy new gadgets/electronics/etc)?,2016-07-13 00:10:42
+36,36,1,Which of these is your carrier for your primary mobile / cell phone?,2016-07-13 00:10:41
+159,36,2,Which of these is your carrier for your primary mobile / cell phone?,2016-07-13 00:10:41
+294,36,3,"Which of these is your carrier for your primary mobile / cell phone?
+",2016-07-13 00:10:42
+37,37,1,What type of mobile phone plan do you have?,2016-07-13 00:10:41
+160,37,2,What type of mobile phone plan do you have?,2016-07-13 00:10:41
+295,37,3,What type of mobile phone plan do you have?,2016-07-13 00:10:42
+38,38,1,Do you use a smart phone?,2016-07-13 00:10:41
+161,38,2,Do you use a smart phone?,2016-07-13 00:10:41
+296,38,3,Do you use a smart phone?,2016-07-13 00:10:42
+39,39,1,What kind of internet connection(s) do you use at home?,2016-07-13 00:10:41
+162,39,2,What kind of internet connection(s) do you use at home?,2016-07-13 00:10:41
+297,39,3,What kind of internet connection(s) do you use at home?,2016-07-13 00:10:42
+40,40,1,"Do you have access to download movies through gaming console, digital receiver, Blu-ray/DVD player or similar devices?",2016-07-13 00:10:41
+163,40,2,"Do you have access to download movies through gaming console, digital receiver, Blu-ray/DVD player or similar devices?",2016-07-13 00:10:41
+298,40,3,"Do you have access to download movies through gaming console, digital receiver, Blu-ray/DVD player or similar devices?
+",2016-07-13 00:10:42
+41,41,1,Which gaming platforms do you regularly use?,2016-07-13 00:10:41
+164,41,2,Which gaming platforms do you regularly use?,2016-07-13 00:10:41
+299,41,3,Which gaming platforms do you regularly use?,2016-07-13 00:10:42
+42,42,1,What kind(s) of video/computer games do you play?,2016-07-13 00:10:41
+165,42,2,What kind(s) of video/computer games do you play?,2016-07-13 00:10:41
+300,42,3,What kind(s) of video/computer games do you play?,2016-07-13 00:10:42
+43,43,1,How many hours per week do you spend playing video/computer games?,2016-07-13 00:10:41
+166,43,2,How many hours per week do you spend playing video/computer games? ,2016-07-13 00:10:41
+301,43,3,"How many hours per week do you spend playing video/computer games?
+",2016-07-13 00:10:42
+44,44,1,How do you play video/computer games?,2016-07-13 00:10:41
+167,44,2,How do you play video/computer games?,2016-07-13 00:10:41
+302,44,3,How do you play video/computer games?,2016-07-13 00:10:42
+45,45,1,Which of the following devices do you use to play games?,2016-07-13 00:10:41
+168,45,2,Which of the following devices do you use to play games?,2016-07-13 00:10:41
+303,45,3,"Which of the following devices do you use to play games?
+",2016-07-13 00:10:42
+46,46,1,"On average, how many computer/video games a month do you purchase?",2016-07-13 00:10:41
+169,46,2,"On average, how many computer/video games a month do you purchase?",2016-07-13 00:10:41
+304,46,3,"On average, how many computer/video games a month do you purchase?
+",2016-07-13 00:10:42
+47,47,1,Do you play video games with others online? (e.g. Xbox Live or World of Warcraft)?,2016-07-13 00:10:41
+170,47,2,Do you play video games with others online? (e.g. Xbox Live or World of Warcraft)?,2016-07-13 00:10:41
+305,47,3,Do you play video games with others online? (e.g. Xbox Live or World of Warcraft)?,2016-07-13 00:10:42
+48,48,1,"On average, how many hours of television do you watch per week?",2016-07-13 00:10:41
+171,48,2,"On average, how many hours of television do you watch per week?",2016-07-13 00:10:41
+306,48,3,"On average, how many hours of television do you watch per week?
+",2016-07-13 00:10:42
+49,49,1,"On average, how many hours of radio do you listen to per week?",2016-07-13 00:10:41
+172,49,2,"On average, how many hours of radio do you listen to per week?",2016-07-13 00:10:41
+307,49,3,"On average, how many hours of radio do you listen to per week?
+",2016-07-13 00:10:42
+50,50,1,Which types of publications do you read?,2016-07-13 00:10:41
+173,50,2,Which types of publications do you read?,2016-07-13 00:10:41
+308,50,3,"Which types of publications do you read?
+",2016-07-13 00:10:42
+51,51,1,For which purposes do you travel by plane?,2016-07-13 00:10:41
+174,51,2,For which purposes do you travel by plane?,2016-07-13 00:10:41
+309,51,3,"For which purposes do you travel by plane?
+",2016-07-13 00:10:42
+52,52,1,"When you fly, which types of flights to you take?",2016-07-13 00:10:41
+175,52,2,"When you fly, which types of flights to you take?",2016-07-13 00:10:41
+310,52,3,"When you fly, which types of flights do you take?
+",2016-07-13 00:10:42
+53,53,1,Which  domestic airlines have you flown with during the last 12 months?,2016-07-13 00:10:41
+176,53,2,Which  domestic airlines have you flown with during the last 12 months?,2016-07-13 00:10:41
+311,53,3,Which  domestic airlines have you flown with during the last 12 months?,2016-07-13 00:10:42
+54,54,1,Which international airlines have you flown with during the last 12 months?,2016-07-13 00:10:41
+177,54,2,Which international airlines have you flown with during the last 12 months?,2016-07-13 00:10:41
+312,54,3,Which international airlines have you flown with during the last 12 months?,2016-07-13 00:10:42
+55,55,1,Which of the following countries/regions have you travelled to in the last 12 months?,2016-07-13 00:10:41
+178,55,2,Which of the following countries/regions have you travelled to in the last 12 months?,2016-07-13 00:10:41
+313,55,3,Which of the following countries/regions have you travelled to in the last 12 months?,2016-07-13 00:10:42
+56,56,1,"Of these hotel chains, which one(s) have you stayed at during the last 12 months?",2016-07-13 00:10:41
+179,56,2,"Of these hotel chains, which one(s) have you stayed at during the last 12 months?",2016-07-13 00:10:41
+314,56,3,"Of these hotel chains, which one(s) have you stayed at during the last 12 months?",2016-07-13 00:10:42
+57,57,1,Do you smoke?,2016-07-13 00:10:41
+180,57,2,Do you smoke?,2016-07-13 00:10:41
+315,57,3,"Do you smoke?
+",2016-07-13 00:10:42
+58,58,1,"On average, how many cigarettes do you smoke in a day?",2016-07-13 00:10:41
+181,58,2,"On average, how many cigarettes do you smoke in a day?",2016-07-13 00:10:41
+316,58,3,"On average, how many cigarettes do you smoke in a day?
+",2016-07-13 00:10:42
+59,59,1,Have you tried to quit smoking using any of these products/methods?,2016-07-13 00:10:41
+182,59,2,Have you tried to quit smoking using any of these products/methods?,2016-07-13 00:10:41
+317,59,3,"Have you tried to quit smoking using any of these products/methods?
+",2016-07-13 00:10:42
+60,60,1,Have you been diagnosed with any of the following illnesses/conditions? ,2016-07-13 00:10:41
+183,60,2,Have you been diagnosed with any of the following illnesses/conditions?,2016-07-13 00:10:41
+318,60,3,Have you been diagnosed with any of the following illnesses/conditions?,2016-07-13 00:10:42
+61,61,1,Have you been diagnosed with any of the following illnesses/conditions? ,2016-07-13 00:10:41
+184,61,2,Have you been diagnosed with any of the following illnesses/conditions?,2016-07-13 00:10:41
+319,61,3,Have you been diagnosed with any of the following illnesses/conditions? ,2016-07-13 00:10:42
+62,62,1,"If you stated that you have been diagnosed with cancer, can you define the type of cancer?",2016-07-13 00:10:41
+185,62,2,"If you stated that you have been diagnosed with cancer, can you define the type of cancer?",2016-07-13 00:10:41
+320,62,3,"If you stated that you have been diagnosed with cancer, can you define the type of cancer?
+",2016-07-13 00:10:42
+63,63,1,"If you stated that you have been diagnosed with diabetes, can you define the type of diabetes?",2016-07-13 00:10:41
+186,63,2,"If you stated that you have been diagnosed with diabetes, can you define the type of diabetes?",2016-07-13 00:10:41
+321,63,3,"If you stated that you have been diagnosed with diabetes, can you define the type of diabetes?
+",2016-07-13 00:10:42
+64,64,1,"If you stated that you have been diagnosed with hepatitis, can you define the type of hepatitis?",2016-07-13 00:10:41
+187,64,2,"If you stated that you have been diagnosed with hepatitis, can you define the type of hepatitis?",2016-07-13 00:10:41
+322,64,3,"If you stated that you have been diagnosed with hepatitis, can you define the type of hepatitis?
+",2016-07-13 00:10:42
+65,65,1,Has anyone else in your household been diagnosed with any of the following illnesses/conditions? ,2016-07-13 00:10:41
+188,65,2,Has anyone else in your household been diagnosed with any of the following illnesses/conditions? ,2016-07-13 00:10:41
+323,65,3,Has anyone else in your household been diagnosed with any of the following illnesses/conditions? ,2016-07-13 00:10:42
+66,66,1,Has anyone else in your household been diagnosed with any of the following illnesses/conditions? ,2016-07-13 00:10:41
+189,66,2,Has anyone else in your household been diagnosed with any of the following illnesses/conditions? ,2016-07-13 00:10:41
+324,66,3,Has anyone else in your household been diagnosed with any of the following illnesses/conditions? ,2016-07-13 00:10:42
+67,67,1,"If you stated that someone in your household has been diagnosed with cancer, can you define the type of cancer?",2016-07-13 00:10:41
+190,67,2,"If you stated that someone in your household has been diagnosed with cancer, can you define the type of cancer?",2016-07-13 00:10:41
+325,67,3,"If you stated that someone in your household has been diagnosed with cancer, can you define the type of cancer?
+",2016-07-13 00:10:42
+68,68,1,"If you stated that someone in your household has been diagnosed with diabetes, can you define the type of diabetes?",2016-07-13 00:10:41
+191,68,2,"If you stated that someone in your household has been diagnosed with diabetes, can you define the type of diabetes?",2016-07-13 00:10:41
+326,68,3,"If you stated that someone in your household has been diagnosed with diabetes, can you define the type of diabetes?
+",2016-07-13 00:10:42
+69,69,1,"If you stated that someone in your household has been diagnosed with hepatitis, can you define the type of hepatitis?",2016-07-13 00:10:41
+192,69,2,"If you stated that someone in your household has been diagnosed with hepatitis, can you define the type of hepatitis?",2016-07-13 00:10:41
+327,69,3,"If you stated that someone in your household has been diagnosed with hepatitis, can you define the type of hepatitis?
+",2016-07-13 00:10:42
+70,70,1,Do you use glasses or contact lenses?,2016-07-13 00:10:41
+193,70,2,Do you use glasses or contact lenses? ,2016-07-13 00:10:41
+328,70,3,"Do you use glasses or contact lenses?
+",2016-07-13 00:10:42
+71,71,1,Do you use a hearing aid?,2016-07-13 00:10:41
+194,71,2,Do you use a hearing aid?,2016-07-13 00:10:41
+329,71,3,"Do you use a hearing aid?
+",2016-07-13 00:10:42
+72,72,1,Please enter the first three characters of your postal code.,2016-07-13 00:10:41
+73,73,1,In which province or territory of Canada do you live? / Quelle est votre province de résidence?,2016-07-13 00:10:41
+74,74,1,What browser are you currently using? ,2016-07-13 00:10:41
+195,74,2,What browser are you currently using?	,2016-07-13 00:10:41
+330,74,3,What browser are you currently using?,2016-07-13 00:10:42
+75,75,1,What operating system are you currently using? ,2016-07-13 00:10:41
+196,75,2,What operating system are you currently using?,2016-07-13 00:10:41
+331,75,3,What operating system are you currently using?,2016-07-13 00:10:42
+76,76,1,Please indicate the age and gender of your child or children:,2016-07-13 00:10:41
+197,76,2,Please indicate the age and gender of your child or children:,2016-07-13 00:10:41
+332,76,3,Please indicate the age and gender of your child or children:,2016-07-13 00:10:42
+77,77,1,What is your current employment status?,2016-07-13 00:10:41
+198,77,2,What is your current employment status?,2016-07-13 00:10:41
+333,77,3,What is your current employment status?,2016-07-13 00:10:42
+78,78,1,"Are you willing to consider joining an online panel community? If you qualify to join the panel, you will be asked to provide your name and e-mail address so that we can complete your registration. ",2016-07-13 00:10:41
+199,78,2,"Are you willing to consider joining an online panel community? If you qualify to join the panel, you will be asked to provide your name and e-mail address so that we can complete your registration. ",2016-07-13 00:10:41
+334,78,3,"Are you willing to consider joining an online panel community? If you qualify to join the panel, you will be asked to provide your name and e-mail address so that we can complete your registration. ",2016-07-13 00:10:42
+79,79,1,Which of the following describes your current living situation?,2016-07-13 00:10:41
+200,79,2,Which of the following describes your current living situation?,2016-07-13 00:10:41
+335,79,3,Which of the following describes your current living situation?,2016-07-13 00:10:42
+80,80,1,"Please choose which departments/products you have influence or decision making authority on spending/purchasing?
+",2016-07-13 00:10:41
+201,80,2,Please choose which departments/products you have influence or decision making authority on spending/purchasing?,2016-07-13 00:10:41
+336,80,3,Please choose which departments/products you have influence or decision making authority on spending/purchasing?,2016-07-13 00:10:42
+81,81,1,How many children do you have under the age of 18?,2016-07-13 00:10:41
+202,81,2,How many children do you have under the age of 18?,2016-07-13 00:10:41
+337,81,3,How many children do you have under the age of 18?,2016-07-13 00:10:42
+82,82,1,Do you suffer from any of the following illnesses/conditions? ,2016-07-13 00:10:41
+203,82,2,Do you suffer from any of the following illnesses/conditions?,2016-07-13 00:10:41
+339,82,3,"Do you suffer from any of the following illnesses/conditions?
+",2016-07-13 00:10:42
+83,83,1,Do you suffer from any of the following illnesses/conditions?,2016-07-13 00:10:41
+204,83,2,Do you suffer from any of the following illnesses/conditions?,2016-07-13 00:10:41
+340,83,3,Do you suffer from any of the following illnesses/conditions?,2016-07-13 00:10:42
+84,84,1,Does anyone else in your household suffer from any of the following illnesses/conditions? ,2016-07-13 00:10:41
+205,84,2,Does anyone else in your household suffer from any of the following illnesses/conditions,2016-07-13 00:10:41
+341,84,3,Does anyone else in your household suffer from any of the following illnesses/conditions?,2016-07-13 00:10:42
+85,85,1,Does anyone else in your household suffer from any of the following illnesses/conditions?,2016-07-13 00:10:41
+206,85,2,Does anyone else in your household suffer from any of the following illnesses/conditions?,2016-07-13 00:10:41
+342,85,3,Does anyone else in your household suffer from any of the following illnesses/conditions?,2016-07-13 00:10:42
+86,86,1,Recontact_PID_1,2016-07-13 00:10:41
+207,86,2,Recontact_PID_1,2016-07-13 00:10:41
+343,86,3,Recontact_PID_1,2016-07-13 00:10:42
+87,87,1,Recontact_RID_1,2016-07-13 00:10:41
+208,87,2,Recontact_RID_1,2016-07-13 00:10:41
+344,87,3,Recontact_RID_1,2016-07-13 00:10:42
+88,88,1,Recontact_Params_1,2016-07-13 00:10:41
+209,88,2,Recontact_Params_1,2016-07-13 00:10:41
+345,88,3,Recontact_Params_1,2016-07-13 00:10:42
+89,89,1,Recontact_Params_2,2016-07-13 00:10:41
+210,89,2,Recontact_Params_2,2016-07-13 00:10:41
+346,89,3,RECONTACT_PARAMS_2,2016-07-13 00:10:42
+90,90,1,Recontact_PID_2,2016-07-13 00:10:41
+211,90,2,Recontact_PID_2,2016-07-13 00:10:41
+347,90,3,Recontact_PID_2,2016-07-13 00:10:42
+91,91,1,Recontact_RID_2,2016-07-13 00:10:41
+212,91,2,Recontact_RID_2,2016-07-13 00:10:41
+349,91,3,Recontact_RID_2,2016-07-13 00:10:42
+92,92,1,Recontact_Params_3,2016-07-13 00:10:41
+213,92,2,Recontact_Params_3,2016-07-13 00:10:41
+350,92,3,Recontact_Params_3,2016-07-13 00:10:42
+93,93,1,Insert PID,2016-07-13 00:10:41
+214,93,2,Insert PID,2016-07-13 00:10:41
+351,93,3,Recontact_RID,2016-07-13 00:10:42
+94,94,1,Which of the following categories best describes your organization's primary industry?,2016-07-13 00:10:41
+215,94,2,Which of the following categories best describes your organization's primary industry?,2016-07-13 00:10:41
+352,94,3,"Which of the following best describes the industry that you, personally, work in?",2016-07-13 00:10:42
+95,95,1,"How often do you go online on a computer (desktop, laptop, netbook, or tablet)? This includes access to the Internet from home, work, or elsewhere (including weekdays and weekends). 
+",2016-07-13 00:10:41
+216,95,2,"How often do you go online on a computer (desktop, laptop, netbook, or tablet)? This includes access to the Internet from home, work, or elsewhere (including weekdays and weekends).",2016-07-13 00:10:41
+353,95,3,"How often do you go online on a computer (desktop, laptop, netbook, or tablet)? This includes access to the Internet from home, work, or elsewhere (including weekdays and weekends). ",2016-07-13 00:10:42
+96,96,1,Please choose the options that best describe your household: / S'il vous plaît choisir les options qui décrivent le mieux votre ménage:,2016-07-13 00:10:41
+217,96,2,Please choose the options that best describe your household:,2016-07-13 00:10:41
+355,96,3,Please choose the options that best describe your household:,2016-07-13 00:10:42
+97,97,1,"How often do you, yourself, shop for your personal care and household products for your household.  Would you say you...? ",2016-07-13 00:10:41
+98,98,1,What is the device model name?,2016-07-13 00:10:41
+357,98,3,What is the device model name?,2016-07-13 00:10:42
+99,99,1,Are you using a tablet?,2016-07-13 00:10:41
+218,99,2,Are you using a tablet?,2016-07-13 00:10:41
+358,99,3,Are you using a tablet?,2016-07-13 00:10:42
+100,100,1,Are you using a mobile device?,2016-07-13 00:10:41
+219,100,2,Are you using a mobile device?,2016-07-13 00:10:41
+359,100,3,Are you using a mobile device?,2016-07-13 00:10:42
+101,101,1,How much total combined income do all members of your household earn before taxes?,2016-07-13 00:10:41
+223,101,2,How much total combined income do all members of your household earn before taxes?,2016-07-13 00:10:41
+102,102,1,"What is your job title, level or responsibility?",2016-07-13 00:10:41
+224,102,2,"What is your job title, level or responsibility?",2016-07-13 00:10:41
+362,102,3,"What is your job title, level or responsibility?",2016-07-13 00:10:42
+103,103,1,Are you a caregiver and in contact at least once a week with someone with any of the following ailments?,2016-07-13 00:10:41
+225,103,2,Are you a caregiver and in contact at least once a week with someone with any of the following ailments?,2016-07-13 00:10:41
+363,103,3,Are you a caregiver and in contact at least once a week with someone with any of the following ailments?,2016-07-13 00:10:42
+104,104,1,Are you a caregiver and in contact at least once a week with someone with any of the following ailments?,2016-07-13 00:10:41
+226,104,2,Are you a caregiver and in contact at least once a week with someone with any of the following ailments?,2016-07-13 00:10:41
+364,104,3,Are you a caregiver and in contact at least once a week with someone with any of the following ailments?,2016-07-13 00:10:42
+105,105,1,What is your sexual orientation?,2016-07-13 00:10:41
+227,105,2,What is your sexual orientation?,2016-07-13 00:10:41
+365,105,3,What is your sexual orientation?,2016-07-13 00:10:42
+106,106,1,"When do you estimate that you will purchase/lease your next car?
+",2016-07-13 00:10:41
+228,106,2,"When do you estimate that you will purchase/lease your next car?
+",2016-07-13 00:10:41
+366,106,3,When do you estimate that you will purchase/lease your next car?,2016-07-13 00:10:42
+107,107,1,Stores PIDs,2016-07-13 00:10:41
+229,107,2,Stores PIDs,2016-07-13 00:10:41
+367,107,3,Stores PIDs,2016-07-13 00:10:42
+108,108,1,"Approximately how many employees work at your organization (all locations)?
+",2016-07-13 00:10:41
+230,108,2,"Approximately how many employees work at your organization (all locations)?
+",2016-07-13 00:10:41
+368,108,3,"Approximately how many employees work at your organization (all locations)?
+",2016-07-13 00:10:42
+109,109,1,SUPPLIER_CODE,2016-07-13 00:10:41
+231,109,2,SUPPLIER_CODE,2016-07-13 00:10:41
+371,109,3,SUPPLIER_CODE,2016-07-13 00:10:42
+110,110,1,Do you possess a driver's license?,2016-07-13 00:10:41
+232,110,2,Do you possess a driver's license?,2016-07-13 00:10:41
+379,110,3,Do you possess a driver's license?,2016-07-13 00:10:42
+111,111,1,Would you be willing to download an app or plug-in to qualify for specific surveys?,2016-07-13 00:10:41
+233,111,2,Would you be willing to download an app or plug-in to qualify for specific surveys?,2016-07-13 00:10:41
+380,111,3,Would you be willing to download an app or plug-in to qualify for specific surveys?,2016-07-13 00:10:42
+112,112,1,Would you be willing to provide personally-identifiable information (PII) to qualify for specific surveys?,2016-07-13 00:10:41
+234,112,2,Would you be willing to provide personally-identifiable information (PII) to qualify for specific surveys?,2016-07-13 00:10:41
+381,112,3,Would you be willing to provide personally-identifiable information (PII) to qualify for specific surveys?,2016-07-13 00:10:42
+113,113,1,In which region do you live?,2016-07-13 00:10:41
+114,114,1,You have indicated that you have a teenage child in the household between the ages of 13 and 17. Is your teenage child available to come to the computer and participate in a survey with your assistance?,2016-07-13 00:10:41
+235,114,2,You have indicated that you have a teenage child in the household between the ages of 13 and 17. Is your teenage child available to come to the computer and participate in a survey with your assistance?,2016-07-13 00:10:41
+382,114,3,You have indicated that you have a teenage child in the household between the ages of 13 and 17. Is your teenage child available to come to the computer and participate in a survey with your assistance?,2016-07-13 00:10:42
+115,115,1,You have indicated that you have a child in the household under the age of 18. Is your child available to come to the computer and participate in a survey with your assistance?,2016-07-13 00:10:41
+237,115,2,You have indicated that you have a child in the household under the age of 18. Is your child available to come to the computer and participate in a survey with your assistance?,2016-07-13 00:10:41
+384,115,3,You have indicated that you have a child in the household under the age of 18. Is your child available to come to the computer and participate in a survey with your assistance?,2016-07-13 00:10:42
+116,116,1,"Thank you for agreeing to participate. At this point, please pass the computer over to your child and have them answer the following questions from his or her perspective. The next questions will be for your teen.",2016-07-13 00:10:41
+238,116,2,"Thank you for agreeing to participate. At this point, please pass the computer over to your child and have them answer the following questions from his or her perspective. The next questions will be for your teen.",2016-07-13 00:10:41
+385,116,3,"Thank you for agreeing to participate. At this point, please pass the computer over to your child and have them answer the following questions from his or her perspective. The next questions will be for your teen.",2016-07-13 00:10:42
+117,117,1,Are you the primary decision maker in your household for grocery purchases?,2016-07-13 00:10:41
+239,117,2,Are you the primary decision maker in your household for grocery purchases?,2016-07-13 00:10:41
+386,117,3,Are you the primary decision maker in your household for grocery purchases?,2016-07-13 00:10:42
+118,118,1,"Some specific surveys require installing an add-on to your browser that will not collect any personal information, and will automatically be uninstalled once the survey is complete. Are you willing to go through these steps to qualify for those surveys?",2016-07-13 00:10:41
+242,118,2,"Some specific surveys require installing an add-on to your browser that will not collect any personal information, and will automatically be uninstalled once the survey is complete. Are you willing to go through these steps to qualify for those surveys?",2016-07-13 00:10:41
+387,118,3,"Some specific surveys require installing an add-on to your browser that will not collect any personal information, and will automatically be uninstalled once the survey is complete. Are you willing to go through these steps to qualify for those surveys?",2016-07-13 00:10:42
+119,119,1,Which gaming platforms do you regularly use?,2016-07-13 00:10:41
+243,119,2,Which gaming platforms do you regularly use?,2016-07-13 00:10:41
+388,119,3,Which gaming platforms do you regularly use?,2016-07-13 00:10:42
+120,120,1,What is your ethnicity?,2016-07-13 00:10:41
+121,121,1,"Please indicate the age and gender of each of your children under the age of 18. 
+Enter in 0 for children under the age of 1.",2016-07-13 00:10:41
+245,121,2,"Please indicate the age and gender of each of your children under the age of 18. 
+Enter in 0 for children under the age of 1.",2016-07-13 00:10:41
+397,121,3,Please indicate the age and gender of each of your children under the age of 18.,2016-07-13 00:10:42
+122,122,1,Which of your children will be able to take a survey?,2016-07-13 00:10:41
+246,122,2,Which of your children will be able to take a survey? ,2016-07-13 00:10:41
+398,122,3,Which of your children will be able to take a survey?,2016-07-13 00:10:42
+123,123,1,What is the highest level of education you have completed? ,2016-07-13 00:10:41
+248,123,2,What is the highest level of education you have completed?,2016-07-13 00:10:41
+434,123,3,What is the highest level of education you have completed?,2016-07-13 00:10:42
+220,124,2,What is your postcode? ,2016-07-13 00:10:41
+221,125,2,In which region do you live?,2016-07-13 00:10:41
+222,126,2,In which county do you live?,2016-07-13 00:10:41
+236,127,2,Which of the following best describes what role you play when making traveling decisions for you and your household?,2016-07-13 00:10:41
+383,127,3,Which of the following best describes what role you play when making traveling decisions for you and your household?,2016-07-13 00:10:42
+240,128,2,Which of the following products have you used or bought in the last 12 months?,2016-07-13 00:10:41
+241,129,2,Which of the following products would you ever consider using?,2016-07-13 00:10:41
+244,130,2,What is your race?,2016-07-13 00:10:41
+247,131,2,Do you have a webcam and are you willing to use it for an online research opportunity?,2016-07-13 00:10:41
+401,131,3,Do you have a webcam and are you willing to use it for an online research opportunity?,2016-07-13 00:10:42
+251,132,3,What is your zip code?,2016-07-13 00:10:42
+252,133,3,"Are you of Hispanic, Latino, or Spanish origin?",2016-07-13 00:10:42
+253,134,3,What is your state?,2016-07-13 00:10:42
+254,135,3,What is your DMA?,2016-07-13 00:10:42
+255,136,3,What is your county?,2016-07-13 00:10:42
+256,137,3,What is your Division?,2016-07-13 00:10:42
+257,138,3,What is your race?,2016-07-13 00:10:42
+258,139,3,what is your MSA?,2016-07-13 00:10:42
+259,140,3,What is your REGION ?,2016-07-13 00:10:42
+262,141,3,"Are you registered to vote?
+",2016-07-13 00:10:42
+338,142,3,Please select the model of the car you own.,2016-07-13 00:10:42
+348,143,3,test,2016-07-13 00:10:42
+354,144,3,What is the device type?,2016-07-13 00:10:42
+356,145,3,What is the device brand name?,2016-07-13 00:10:42
+360,146,3,Is flash enabled?,2016-07-13 00:10:42
+361,147,3,How much total combined income do all members of your household earn before taxes?,2016-07-13 00:10:42
+369,148,3,Has a doctor or physician or allergy specialist diagnosed your condition as being an allergy? ,2016-07-13 00:10:42
+370,149,3,Which of the following religions do you most closely identify with?,2016-07-13 00:10:42
+372,150,3,Which of the following appliances do you own?,2016-07-13 00:10:42
+373,151,3,"Which of the following appliances have you purchased in the last 6 months, or intend to buy in the next 6 months?",2016-07-13 00:10:42
+374,152,3,"Which of the following financial products do you own?
+",2016-07-13 00:10:42
+375,153,3,Which of the following groceries have you purchased in the last four weeks?,2016-07-13 00:10:42
+376,154,3,Which of the following symptoms have you experienced in the last 6 months?,2016-07-13 00:10:42
+377,155,3,Have you taken any medicine to avoid menstrual cramps in the last 6 months?,2016-07-13 00:10:42
+378,156,3,"Which of the following products have you purchased in the last 2 years, or intend to buy in the next 12 months?",2016-07-13 00:10:42
+389,157,3,"In politics today, do you consider yourself a Democrat, Republican, or Independent?",2016-07-13 00:10:42
+390,158,3,Would you say that in your household you speak…? / Diría que en su hogar usted habla…?,2016-07-13 00:10:42
+391,159,3,When do you estimate that you will purchase/lease your next car?,2016-07-13 00:10:42
+392,160,3,Some research studies require validating your information with your Linkedin profile. Would you be willing to sign in with LinkedIn to qualify for specific surveys?,2016-07-13 00:10:42
+393,161,3,Linkedin Auth Status,2016-07-13 00:10:42
+394,162,3,What is your linkedin industry?,2016-07-13 00:10:42
+395,163,3,What is your linkedin position?,2016-07-13 00:10:42
+396,164,3,What is your linkedIn location?,2016-07-13 00:10:42
+399,165,3,"Generally speaking, do you usually think of yourself as a Republican, a Democrat, an Independent, or what?",2016-07-13 00:10:42
+400,166,3,,2016-07-13 00:10:42
+402,167,3,Political_FEC_07_08,2016-07-13 00:10:42
+403,168,3,Political_FEC_09_10,2016-07-13 00:10:42
+404,169,3,Political_FEC_11_12,2016-07-13 00:10:42
+405,170,3,Political_FEC_13_14,2016-07-13 00:10:42
+406,171,3,Political_2006_Voter,2016-07-13 00:10:42
+407,172,3,Political_2007_Voter,2016-07-13 00:10:42
+408,173,3,Political_2009_Voter,2016-07-13 00:10:42
+409,174,3,Political_2010_Voter,2016-07-13 00:10:42
+410,175,3,Political_2011_Voter,2016-07-13 00:10:42
+411,176,3,Political_2013_Voter,2016-07-13 00:10:42
+412,177,3,Political_2014_Voter,2016-07-13 00:10:42
+413,178,3,Political_Runoff_2006,2016-07-13 00:10:42
+414,179,3,Political_Runoff_2008,2016-07-13 00:10:42
+415,180,3,Political_Runoff_2009,2016-07-13 00:10:42
+416,181,3,Political_Runoff_2010,2016-07-13 00:10:42
+417,182,3,Political_Runoff_2011,2016-07-13 00:10:42
+418,183,3,Political_Runoff_2012,2016-07-13 00:10:42
+419,184,3,Political_Runoff_2013,2016-07-13 00:10:42
+420,185,3,Political_Runoff_2014,2016-07-13 00:10:42
+421,186,3,Political_Primary_2006,2016-07-13 00:10:42
+422,187,3,Political_Primary_2007,2016-07-13 00:10:42
+423,188,3,Political_Primary_2008,2016-07-13 00:10:42
+424,189,3,Political_Primary_2009,2016-07-13 00:10:42
+425,190,3,Political_Primary_2010,2016-07-13 00:10:42
+426,191,3,Political_Primary_2011,2016-07-13 00:10:42
+427,192,3,Political_Primary_2012,2016-07-13 00:10:42
+428,193,3,Political_Primary_2013,2016-07-13 00:10:42
+429,194,3,Political_Primary_2014,2016-07-13 00:10:42
+430,195,3,Political_Registration_Date,2016-07-13 00:10:42
+431,196,3,Political_State_Contributor,2016-07-13 00:10:42
+432,197,3,Political_Voter_Count,2016-07-13 00:10:42
+433,198,3,How much total combined income do all members of your household earn before taxes?,2016-07-13 00:10:42

@@ -1,0 +1,26 @@
+.report_date {
+    width: 221px;
+    float: left;
+}
+.use_compare_date {
+    float: left;
+    margin-top: 28px;
+}
+#start_use_compare_wrapper {
+    width: 100%;
+}
+#compare_date_wrapper {
+    clear: both;
+    display: none;
+    }
+    /**
+    width: 221px;
+   float: left;
+   display: none;
+}*/
+
+.clearfix {
+    clear: both;
+}
+
+
